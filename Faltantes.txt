@@ -1,0 +1,5 @@
+falta crear componente recuperar contraseña ( revisar )
+
+falta crear componente perfil ( revisar )
+
+ 

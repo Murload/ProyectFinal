@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-home',
@@ -12,15 +11,5 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  alerta_inicio(){
-    Swal.fire(
-      'The Internet?',
-      'That thing is still around?',
-      'question'
-    )
-
-  }
-
 
 }
