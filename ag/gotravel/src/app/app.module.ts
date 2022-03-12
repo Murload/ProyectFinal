@@ -12,6 +12,7 @@ import { TouristPlanComponent } from './components/views/tourist-plan/tourist-pl
 import { NewTripComponent } from './components/views/new-trip/new-trip.component';
 import { PublicTripComponent } from './components/views/public-trip/public-trip.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { Section1Component } from './components/views/home/section1/section1.component';
 
 
 @NgModule({
@@ -26,6 +27,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     NewTripComponent,
     PublicTripComponent,
     NavbarComponent,
+    Section1Component,
+
   ],
   imports: [
     BrowserModule,

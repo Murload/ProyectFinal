@@ -27,24 +27,11 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/bootstrap/dist/css/animate.css",
-              "node_modules/bootstrap/dist/css/flex-slider.css",
-              "node_modules/bootstrap/dist/css/font-awesome.css",
-              "node_modules/bootstrap/dist/css/fullpage.min.css",
-              "node_modules/bootstrap/dist/css/owl.carousel.css",
-              "node_modules/bootstrap/dist/css/responsive.css",
-              "node_modules/bootstrap/dist/css/templatemo-style.css"
+              "src/assets/vendor/bootstrap/css/bootstrap.min.css",
+              "src/assets/css/style.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "node_modules/bootstrap/dist/js/custom.js",
-              "node_modules/bootstrap/dist/js/form.js",
-              "node_modules/bootstrap/dist/js/fullpage.min.js",
-              "node_modules/bootstrap/dist/js/jquery.inview.min.js",
-              "node_modules/bootstrap/dist/js/jquery.js",
-              "node_modules/bootstrap/dist/js/owl.carousel.min.js",
-              "node_modules/bootstrap/dist/js/scrolloverflow.js"
+              "src/assets/js/main.js"
             ]
           },
           "configurations": {
