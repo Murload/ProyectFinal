@@ -1,19 +1,37 @@
-.side-main {
+
+.logo-prin {
   display: flex;
-  width: 20vw;
-  height: 100vh;
-  background: linear-gradient(45deg,#1de0e7, #1de099 );
+  align-self: center;
+  width: 12vw;
+  height: 10vh;
+
 }
+
+.logo-prin img {
+  width: 100%;
+  height: 100%;
+}
+
+
 
 .side-bar {
   display: flex;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100%;
+  background: linear-gradient(45deg, #00a2ff, #00ff88 );
   flex-flow: column wrap;
-  justify-content: flex-start;
-  margin-top: 15vh;
-  /* overflow: hidden; */
+  padding: 20px;
   position: fixed;
-  /* align-content: flex-end; */
-  /* align-items: center; */
+  row-gap: 20px;
+}
+
+.side-options {
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: 30px;
+  /* padding: 10px; */
 }
 
 .side-icolink {
@@ -21,6 +39,8 @@
   column-gap: 30px;
   margin: 10px;
 }
+
+
 .side-icolink a {
   display: flex;
   justify-content: flex-end;
@@ -29,9 +49,10 @@
 }
 
 
-
-
 .icons{
     width: 32px;
     height: 32px;
 }
+
+
+

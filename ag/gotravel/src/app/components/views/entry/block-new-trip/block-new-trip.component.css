@@ -1,0 +1,66 @@
+.new_trip {
+  display: flex;
+  flex-direction: column;
+  border: 3px black solid ;
+  width: 73%;
+  height: 55%;
+  position: absolute;
+  left: 280px;
+  margin: 2.5vw;
+}
+
+.title_trips {
+  display: flex;
+  justify-content: center;
+  border: 3px salmon solid;
+}
+
+.trips_divs {
+  display: flex;
+  flex-direction: row;
+  border: 5px rgb(38, 123, 233) solid;
+  min-height: 50%;
+  max-height: 75%;
+}
+
+/* add new trip */
+.add_trip {
+  border: 6px purple solid;
+  min-width: 20%;
+  max-width: 35%;
+}
+.add_trip img {
+  max-width: 35%;
+  max-height: 60%;
+  border: 3px green solid;
+
+}
+.add_trip h4 {
+  max-width: 35%;
+  max-height: 60%;
+  border: 3px red solid;
+
+}
+
+/* older trips */
+.default_div {
+  /* display: flex; */
+  border: 6px purple solid;
+  min-width: 20%;
+  max-width: 35%;
+}
+
+.default_div img {
+  min-width: 60%;
+  max-width: 100%;
+  max-height: 60%;
+  border: 3px green solid;
+}
+.default_div p {
+  /* max-height: 60%; */
+  min-width: 60%;
+  max-width: 100%;
+  max-height: 60%;
+  border: 3px red solid;
+}
+

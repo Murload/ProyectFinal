@@ -15,6 +15,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { Section1Component } from './components/views/home/section1/section1.component';
 import { EntryComponent } from './components/views/entry/entry.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { ProofsideComponent } from './components/views/entry/proofside/proofside.component';
+import { BlockNewTripComponent } from './components/views/entry/block-new-trip/block-new-trip.component';
 
 
 @NgModule({
@@ -32,6 +34,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     Section1Component,
     EntryComponent,
     SidebarComponent,
+    ProofsideComponent,
+    BlockNewTripComponent,
 
   ],
   imports: [
