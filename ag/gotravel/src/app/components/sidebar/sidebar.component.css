@@ -1,0 +1,37 @@
+.side-main {
+  display: flex;
+  width: 20vw;
+  height: 100vh;
+  background: linear-gradient(45deg,#1de0e7, #1de099 );
+}
+
+.side-bar {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  margin-top: 15vh;
+  /* overflow: hidden; */
+  position: fixed;
+  /* align-content: flex-end; */
+  /* align-items: center; */
+}
+
+.side-icolink {
+  display: flex;
+  column-gap: 30px;
+  margin: 10px;
+}
+.side-icolink a {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: aliceblue;
+}
+
+
+
+
+.icons{
+    width: 32px;
+    height: 32px;
+}
