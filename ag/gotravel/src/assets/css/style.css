@@ -18,8 +18,9 @@ body {
   background: #fff;
   color: #666666;
   font-family: "Open Sans", sans-serif;
-  position: relative;
-  min-height: 100vh;
+  /* position: absolute; */
+  /* min-height: 60vh; */
+  height: 100%;
   width: 100%;
 
 }
