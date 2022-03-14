@@ -10,6 +10,8 @@ import { NewTripComponent } from './components/views/new-trip/new-trip.component
 import { PublicTripComponent } from './components/views/public-trip/public-trip.component';
 import { RegisterComponent } from './components/views/register/register.component';
 import { TouristPlanComponent } from './components/views/tourist-plan/tourist-plan.component';
+import { EntryComponent } from './components/views/entry/entry.component';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -19,7 +21,8 @@ const routes: Routes = [
   { path: 'newtrip', component: NewTripComponent },
   { path: 'publictrip', component: PublicTripComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'plan', component: TouristPlanComponent }
+  { path: 'plan', component: TouristPlanComponent },
+  { path: 'sesion', component: EntryComponent }
 ];
 
 @NgModule({

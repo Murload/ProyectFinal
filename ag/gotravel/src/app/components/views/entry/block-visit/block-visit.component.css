@@ -1,0 +1,18 @@
+.new_trip {
+  /* flex */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* size */
+  width: 73%;
+  height: 55%;
+  position: absolute;
+  left: 280px;
+  top: 65%;
+  margin: 2.5vw;
+  /* color */
+  border-radius: 15px;
+  /* background-color: #dadada; */
+  background-color: #e7e7e7;
+
+}

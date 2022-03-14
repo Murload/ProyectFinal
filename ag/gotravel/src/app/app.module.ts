@@ -13,6 +13,11 @@ import { NewTripComponent } from './components/views/new-trip/new-trip.component
 import { PublicTripComponent } from './components/views/public-trip/public-trip.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { Section1Component } from './components/views/home/section1/section1.component';
+import { EntryComponent } from './components/views/entry/entry.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { ProofsideComponent } from './components/views/entry/proofside/proofside.component';
+import { BlockNewTripComponent } from './components/views/entry/block-new-trip/block-new-trip.component';
+import { BlockVisitComponent } from './components/views/entry/block-visit/block-visit.component';
 
 
 @NgModule({
@@ -28,6 +33,11 @@ import { Section1Component } from './components/views/home/section1/section1.com
     PublicTripComponent,
     NavbarComponent,
     Section1Component,
+    EntryComponent,
+    SidebarComponent,
+    ProofsideComponent,
+    BlockNewTripComponent,
+    BlockVisitComponent,
 
   ],
   imports: [

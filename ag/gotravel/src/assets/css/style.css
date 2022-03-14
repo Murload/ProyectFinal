@@ -8,11 +8,21 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: #fff;
   color: #666666;
   font-family: "Open Sans", sans-serif;
-  overflow-x: hidden;
+  /* position: absolute; */
+  /* min-height: 60vh; */
+  height: 100%;
+  width: 100%;
+
 }
 
 a {
@@ -116,7 +126,7 @@ h1, h2, h3, h4, h5, h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /**
-* Desktop Navigation 
+* Desktop Navigation
 */
 .navbar {
   padding: 0;
@@ -227,7 +237,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /**
-* Mobile Navigation 
+* Mobile Navigation
 */
 .mobile-nav-toggle {
   color: #fff;
@@ -1126,7 +1136,7 @@ section {
   background-color: #1dc8cd;
 }
 #contact .php-email-form button[type=submit] {
-  background: linear-gradient(45deg, #1de099, #1dc8cd);
+  background: linear-gradient(45deg, #1de098ef, #1dc8cd);
   border: 0;
   border-radius: 20px;
   padding: 8px 30px;
