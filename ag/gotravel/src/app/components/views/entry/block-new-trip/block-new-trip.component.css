@@ -1,66 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+p, h2{
+  font-family: 'Fredoka', sans-serif;
+}
+
 .new_trip {
+  /* flex */
   display: flex;
   flex-direction: column;
-  border: 3px black solid ;
+  justify-content: center;
+  /* size */
   width: 73%;
   height: 55%;
   position: absolute;
   left: 280px;
   margin: 2.5vw;
+  /* color */
+  border-radius: 15px;
+  /* background-color: #dadada; */
+  background-color: #e7e7e7;
+
 }
 
 .title_trips {
   display: flex;
   justify-content: center;
-  border: 3px salmon solid;
+
+  /* border: 3px salmon solid; */
+}
+
+
+.title_trips h2 {
+  color: black;
+  font-weight: 400;
+  font-family: 'Fredoka', sans-serif;
 }
 
 .trips_divs {
   display: flex;
   flex-direction: row;
-  border: 5px rgb(38, 123, 233) solid;
+  gap: 20px;
+  /* border: 5px rgb(38, 123, 233) solid; */
   min-height: 50%;
   max-height: 75%;
+  margin: 15px;
 }
 
 /* add new trip */
 .add_trip {
-  border: 6px purple solid;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  /* border: 6px purple solid; */
+  height: 60%;
   min-width: 20%;
   max-width: 35%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
 }
+
 .add_trip img {
   max-width: 35%;
   max-height: 60%;
-  border: 3px green solid;
 
 }
 .add_trip h4 {
-  max-width: 35%;
-  max-height: 60%;
-  border: 3px red solid;
-
+  text-align: center;
+  margin-top: 5px;
+  min-width: 50%;
+  max-width: 75%;
+  min-height: 10%;
+  max-height: 30%;
+  font-size: 70%;
+  overflow: hidden;
 }
 
 /* older trips */
 .default_div {
-  /* display: flex; */
-  border: 6px purple solid;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5%;
   min-width: 20%;
   max-width: 35%;
+  min-height: 40%;
+  max-height: 100%;
+  background-color: white;
+
 }
 
 .default_div img {
+  /* background-size: cover; */
   min-width: 60%;
   max-width: 100%;
-  max-height: 60%;
-  border: 3px green solid;
+  min-height: 10%;
+  max-height: 55%;
 }
 .default_div p {
-  /* max-height: 60%; */
   min-width: 60%;
   max-width: 100%;
-  max-height: 60%;
-  border: 3px red solid;
+  min-height: 20%;
+  max-height: 42%;
+  font-size: 1.4vw;
+  overflow: auto;
+  text-align: center;
+  margin: 0;
+  color: black;
 }
 
