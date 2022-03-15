@@ -13,6 +13,9 @@ import { NewTripComponent } from './components/views/new-trip/new-trip.component
 import { PublicTripComponent } from './components/views/public-trip/public-trip.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { Section1Component } from './components/views/home/section1/section1.component';
+import { AboutUsComponent } from './components/views/home/about-us/about-us.component';
+import { OurServicesComponent } from './components/views/home/our-services/our-services.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -28,7 +31,9 @@ import { Section1Component } from './components/views/home/section1/section1.com
     PublicTripComponent,
     NavbarComponent,
     Section1Component,
-
+    AboutUsComponent,
+    OurServicesComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
