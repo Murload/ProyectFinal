@@ -16,6 +16,11 @@ import { Section1Component } from './components/views/home/section1/section1.com
 import { AboutUsComponent } from './components/views/home/about-us/about-us.component';
 import { OurServicesComponent } from './components/views/home/our-services/our-services.component';
 import { FooterComponent } from './footer/footer.component';
+import { EntryComponent } from './components/views/entry/entry.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { ProofsideComponent } from './components/views/entry/proofside/proofside.component';
+import { BlockNewTripComponent } from './components/views/entry/block-new-trip/block-new-trip.component';
+import { BlockVisitComponent } from './components/views/entry/block-visit/block-visit.component';
 
 
 @NgModule({
@@ -34,6 +39,11 @@ import { FooterComponent } from './footer/footer.component';
     AboutUsComponent,
     OurServicesComponent,
     FooterComponent
+    EntryComponent,
+    SidebarComponent,
+    ProofsideComponent,
+    BlockNewTripComponent,
+    BlockVisitComponent,
   ],
   imports: [
     BrowserModule,

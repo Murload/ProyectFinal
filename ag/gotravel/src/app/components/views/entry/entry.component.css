@@ -1,0 +1,16 @@
+ .main_content {
+  /*display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.5%;
+  position: absolute;
+  min-height: 8%;
+  max-height: 100%;
+  overflow: visible;
+  left:280px; */
+
+  min-height: 150vh;
+  max-height: 250vh;
+
+}
+

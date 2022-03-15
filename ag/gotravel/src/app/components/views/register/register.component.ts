@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
+  register ={
+    brand : "SKY TRIP",
+    img : "../assets/img/planet.png",
+
+  }
+
   constructor() { }
 
   ngOnInit(): void {

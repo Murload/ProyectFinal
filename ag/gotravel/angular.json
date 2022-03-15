@@ -39,6 +39,7 @@
               "src/assets/vendor/aos/aos.js",
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/@popperjs/core/dist/umd/popper.min.js"
+              "src/app/components/views/entry/proofside/proof.js",
             ]
           },
           "configurations": {
