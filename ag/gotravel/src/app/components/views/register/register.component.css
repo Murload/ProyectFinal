@@ -14,7 +14,7 @@
     width: 40rem;
 }
 .contents_container{
-    margin-top: 100px;
+    margin-top: 70px;
 
 
 }
@@ -28,7 +28,10 @@
 }
 
 input:focus{
+    outline: none;
     border: 0;
+    border-color: black;
+    
 } 
 
 .contents_container button{
@@ -44,7 +47,7 @@ input:focus{
 }
 .img_container{
     text-align: center;
-    margin-top: 110px;
+    margin-top: 80px;
     color: rgb(77, 212, 134);
     font-size: 50px;
 }
@@ -56,4 +59,10 @@ input:focus{
 .img_container img{
     margin-top: 60px;
     width: 500px; 
+}
+
+span{
+    color: red;
+    font-size: 13px;
+
 }
