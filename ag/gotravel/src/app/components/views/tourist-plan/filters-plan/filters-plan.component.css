@@ -1,7 +1,26 @@
 .container_filter{
+    display: flex;
+    align-items: center;
     background-color: antiquewhite;
+    border-radius: 15px;
+    height: 70px;
+    margin: -40px 20px 20px 20px;
+    justify-content: flex-start;
+}
+div{
+    margin-left: 30px;
+    height: 37px;
+    width: 120px;
 
+}
+input{
+    height: 37px;
 
+}
 
-
+select{
+    height: 37px;
+    width: 120px;
+    
+    
 }
