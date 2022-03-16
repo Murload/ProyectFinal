@@ -38,7 +38,7 @@ import { BlockVisitComponent } from './components/views/entry/block-visit/block-
     Section1Component,
     AboutUsComponent,
     OurServicesComponent,
-    FooterComponent
+    FooterComponent,
     EntryComponent,
     SidebarComponent,
     ProofsideComponent,
