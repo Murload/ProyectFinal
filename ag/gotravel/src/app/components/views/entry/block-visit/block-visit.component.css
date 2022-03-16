@@ -1,18 +1,62 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+p, h2{
+  font-family: 'Fredoka', sans-serif;
+}
+
 .new_trip {
   /* flex */
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   /* size */
   width: 73%;
-  height: 55%;
+  height: 60%;
   position: absolute;
   left: 280px;
   top: 65%;
   margin: 2.5vw;
   /* color */
   border-radius: 15px;
-  /* background-color: #dadada; */
   background-color: #e7e7e7;
+}
+
+.title_trips {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title_trips h2 {
+  color: black;
+  font-weight: 400;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.trips_divs {
+  display: grid;
+  grid-template-columns: repeat(3, 0.2fr);
+  grid-template-rows: repeat(2, 0.5fr);
+  column-gap: 3.5%;
+  row-gap: 10%;
+  justify-content: space-around;
+  width: 60vw;
+  height: 40vh;
 
 }
+
+
+.default_div {
+  min-width: 15vw;
+  max-width: 20vw;
+  min-height: 10vh;
+  max-height: 35vh;
+}
+
+
+.default_div img {
+  width:100%;
+  height: 100%;
+}
+

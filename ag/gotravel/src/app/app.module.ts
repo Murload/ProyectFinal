@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatSliderModule } from '@angular/material/slider'
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,10 +20,22 @@ import { OurServicesComponent } from './components/views/home/our-services/our-s
 import { FooterComponent } from './footer/footer.component';
 import { EntryComponent } from './components/views/entry/entry.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { ProofsideComponent } from './components/views/entry/proofside/proofside.component';
 import { BlockNewTripComponent } from './components/views/entry/block-new-trip/block-new-trip.component';
 import { BlockVisitComponent } from './components/views/entry/block-visit/block-visit.component';
 import { ViajesComponent } from './components/viajes/viajes.component';
+import { BlockVisitComponent } from './components/views/entry/block-visit/block-visit.component'
+import { ScheduleComponent } from './components/views/nannies/schedule/schedule.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { FiltersPlanComponent } from './components/views/tourist-plan/filters-plan/filters-plan.component';
+import { TitledescComponent } from './components/views/new-trip/titledesc/titledesc.component';
+import { FormNewtripComponent } from './components/views/new-trip/form-newtrip/form-newtrip.component';
+
+
 
 
 @NgModule({
@@ -42,14 +56,25 @@ import { ViajesComponent } from './components/viajes/viajes.component';
     FooterComponent,
     EntryComponent,
     SidebarComponent,
-    ProofsideComponent,
     BlockNewTripComponent,
     BlockVisitComponent,
     ViajesComponent,
+    ScheduleComponent,
+    FiltersPlanComponent,    
+    TitledescComponent,
+    FormNewtripComponent
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatNativeDateModule ,
+    MatInputModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

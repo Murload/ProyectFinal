@@ -13,14 +13,13 @@
 }
 
 
-
 .side-bar {
   display: flex;
-  top: -10;
-  left: 10;
-  width: 160px;
+  top: 0;
+  left: 0;
+  width: 22%;
   height: 100%;
-  background: linear-gradient(45deg, #00a2ff, #00ff88 );
+  background: linear-gradient(45deg, #00a2ff, #05d675 );
   flex-flow: column wrap;
   padding: 10px;
   position: fixed;
@@ -45,7 +44,10 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  color: aliceblue;
+  color: black;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: bolder;
+  font-size: 1.28vw;
 }
 
 

@@ -1,0 +1,43 @@
+p, h2{
+  font-family: 'Fredoka', sans-serif;
+}
+
+.titledesc {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2vh;
+  left: 33%;
+  top: 5%;
+  width: 55vw;
+  height: 30vh;
+  border: 3px #1DC8CD solid;
+  border-radius: 12px;
+}
+
+.title-plan {
+  max-width: 50vw;
+  max-height: 10vh;
+}
+
+.title-plan h2{
+  margin: 0;
+  color: black;
+  font-weight: 500;
+}
+
+.text-plan {
+  margin-bottom: 0px;
+  max-width: 50vw;
+  max-height: 30vh;
+  overflow: auto;
+  background-color: #E7e7e7;
+  border-radius: 10px;
+}
+
+.text-plan p{
+  margin: 0px;
+  padding: 3vh;
+}
