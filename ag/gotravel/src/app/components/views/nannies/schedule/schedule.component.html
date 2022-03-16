@@ -1,0 +1,39 @@
+<section class="babysitter">
+    <div class="date">
+         <div>
+        <select class="form-select" aria-label="Default select example">
+            <option selected>Cantidad de niños</option>
+            <option value="1">Uno</option>
+            <option value="2">Dos</option>
+            <option value="3">Tres</option>
+          </select>
+    </div>
+    <br>
+    <div>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Selecciona una fecha</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <button mat-raised-button (click)="picker.open()">Abrir</button>
+          
+    </div>
+    <br>
+    <div>
+        <input class="form-control" type="text" placeholder="Introduzca su dirección" aria-label="default input example">
+    </div>
+    <br>
+<div>
+    <div class="form-floating">
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+        <label for="floatingTextarea">Información adicional</label>
+      </div>
+      <div>
+          <br>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-success" type="button">Solicitar</button>
+          </div>
+      </div>
+    </div>
+</div>
+</section>
