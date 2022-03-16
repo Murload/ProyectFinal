@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+p, h3{
+  font-family: 'Fredoka', sans-serif;
+}
+.card {
+align-items: center;
+text-align: center;
+margin: auto;
+width: 55%;
+border-radius: 20px;
+}
+img{
+  width: 150px;
+  margin-top: 10px;
+}
+
+.babysitter {
+  /* flex */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* size */
+  width: 73%;
+  height: 55%;
+  position: absolute;
+  left: 280px;
+  margin: 2.5vw;
+  /* color */
+  border-radius: 15px;
+  /* background-color: #dadada; */
+  background-color: #e7e7e7;
+}
+
+
+
+
