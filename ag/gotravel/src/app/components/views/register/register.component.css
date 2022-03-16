@@ -14,7 +14,7 @@
     width: 40rem;
 }
 .contents_container{
-    margin-left: 120px;
+    margin-left: 110px;
     margin-top: 130px;
     width: 10px;
  
@@ -42,7 +42,7 @@
 
 }
 .img_container{
-    margin-right: 130px;
+    margin-right: 0px;
     text-align: center;
     margin-top: 75px;
     color: rgb(77, 212, 134);
