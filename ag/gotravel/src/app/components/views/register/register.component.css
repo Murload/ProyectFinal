@@ -7,16 +7,18 @@
 
 .container > .contents_container {
 	-webkit-flex: auto;
-	flex: auto;
+	
 }
 
 .container > .img_container {
     width: 40rem;
 }
 .contents_container{
-    margin-top: 70px;
-
-
+    margin-left: 120px;
+    margin-top: 130px;
+    width: 10px;
+ 
+    
 }
 
 .contents_container input {
@@ -27,12 +29,6 @@
 
 }
 
-input:focus{
-    outline: none;
-    border: 0;
-    border-color: black;
-    
-} 
 
 .contents_container button{
     width: 400px;
@@ -46,8 +42,9 @@ input:focus{
 
 }
 .img_container{
+    margin-right: 130px;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 75px;
     color: rgb(77, 212, 134);
     font-size: 50px;
 }
@@ -57,12 +54,16 @@ input:focus{
 }
 
 .img_container img{
-    margin-top: 60px;
-    width: 500px; 
+    width: 600px; 
 }
 
 span{
     color: red;
     font-size: 13px;
+
+}
+.img_regis{
+    margin-top: -100px;
+
 
 }
