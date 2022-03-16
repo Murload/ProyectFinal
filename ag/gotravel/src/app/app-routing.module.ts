@@ -26,9 +26,9 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'plan', component: TouristPlanComponent },
   { path: 'sesion', component: EntryComponent },
-  { path: 'ver-viajes', component: SidebarComponent },
+  // { path: 'ver-viajes', component: SidebarComponent },
    { path: 'viajes', component: ViajesComponent },
-   
+
 ];
 
 @NgModule({

@@ -2,8 +2,8 @@
 .logo-prin {
   display: flex;
   align-self: center;
-  width: 8vw;
-  height: 8vh;
+  width: 12vw;
+  height: 10vh;
 
 }
 
@@ -21,22 +21,22 @@
   height: 100%;
   background: linear-gradient(45deg, #00a2ff, #05d675 );
   flex-flow: column wrap;
-  padding: 10px;
+  padding: 20px;
   position: fixed;
-  
+  row-gap: 20px;
 }
 
 .side-options {
   display: flex;
   flex-flow: column wrap;
-  row-gap: 20px;
+  row-gap: 30px;
   /* padding: 10px; */
 }
 
 .side-icolink {
   display: flex;
   column-gap: 30px;
-  margin: 0px;
+  margin: 10px;
 }
 
 
@@ -48,6 +48,7 @@
   font-family: 'Fredoka', sans-serif;
   font-weight: bolder;
   font-size: 1.28vw;
+  text-decoration: none;
 }
 
 

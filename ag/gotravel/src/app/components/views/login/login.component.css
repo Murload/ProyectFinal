@@ -15,7 +15,7 @@
 }
 .contents_container{
     margin-top: 250px;
-    
+
 
 }
 
@@ -33,9 +33,13 @@
     width: 400px;
     margin-top: 20px;
 }
+.contents_container button a{
+    color: white;
+    text-decoration: none;
+}
 .contents_container select{
     width: 400px;
-    
+
     color: gray;
     margin-top: 20px;
 
@@ -48,7 +52,7 @@
 }
 .img_container b{
     color: rgb(27, 138, 158);
-    
+
 }
 
 .img_container img{
