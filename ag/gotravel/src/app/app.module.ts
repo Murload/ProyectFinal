@@ -21,6 +21,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ProofsideComponent } from './components/views/entry/proofside/proofside.component';
 import { BlockNewTripComponent } from './components/views/entry/block-new-trip/block-new-trip.component';
 import { BlockVisitComponent } from './components/views/entry/block-visit/block-visit.component';
+import { ViajesComponent } from './components/viajes/viajes.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { BlockVisitComponent } from './components/views/entry/block-visit/block-
     ProofsideComponent,
     BlockNewTripComponent,
     BlockVisitComponent,
+    ViajesComponent,
   ],
   imports: [
     BrowserModule,
