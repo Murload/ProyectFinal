@@ -1,5 +1,5 @@
 <section class="container_filter">
-        <div class="filters5">Filtros:</div>
+        <div class="filters_tit">Filtros:</div>
         <div class="filters1">
             <select class="form-select" aria-label="Default select example">
                 <option selected>País</option>
@@ -26,14 +26,23 @@
         </div>
         <div class="filters4">
             <input class="form-control" type="text" placeholder="Personas" aria-label="default input example">
-
-        </div>
-        <div>
-            a
+            
         </div>
         <div class="filters4">
+            <mat-form-field appearance="fill">
+                <mat-label>Enter a date range</mat-label>
+                <mat-date-range-input [rangePicker]="picker">
+                <input matStartDate placeholder="Start date">
+                <input matEndDate placeholder="End date">
+                </mat-date-range-input>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-date-range-picker #picker></mat-date-range-picker>
+            </mat-form-field>
+            
+        </div>
+
+        <div class="filters6">
             <button class="btn btn-primary">Buscar</button>
         </div>
         
-  
     </section>

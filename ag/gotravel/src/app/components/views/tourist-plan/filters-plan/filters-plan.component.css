@@ -1,21 +1,23 @@
 .container_filter{
     display: flex;
     align-items: center;
-    background-color: antiquewhite;
+    background-color: rgb(22, 218, 113);
     border-radius: 15px;
-    height: 70px;
-    margin: -40px 20px 20px 20px;
+    height: 150px;
+    margin-left: 20px;
+    margin-right: 20px;
     justify-content: flex-start;
 }
 div{
-    margin-left: 30px;
+    margin-left: 1%;
     height: 37px;
     width: 120px;
+
 
 }
 input{
     height: 37px;
-
+    color: black;
 }
 
 select{
@@ -23,4 +25,16 @@ select{
     width: 120px;
     
     
+}
+.filters6{
+    margin-left: 150px;
+
+
+}
+.filters_tit{
+
+    background-color: rgb(26, 200, 113);
+   text-align: center;
+    border-radius: 15px;
+
 }
