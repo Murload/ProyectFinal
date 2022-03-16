@@ -54,7 +54,7 @@ import { FormNewtripComponent } from './components/views/new-trip/form-newtrip/f
     SidebarComponent,
     BlockNewTripComponent,
     BlockVisitComponent,
-    ScheduleComponent
+    ScheduleComponent,
     FiltersPlanComponent,    
     TitledescComponent,
     FormNewtripComponent,
