@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatSliderModule } from '@angular/material/slider'
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/views/home/home.component';
@@ -20,6 +21,7 @@ import { FooterComponent } from './footer/footer.component';
 import { EntryComponent } from './components/views/entry/entry.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { BlockNewTripComponent } from './components/views/entry/block-new-trip/block-new-trip.component';
+import { ViajesComponent } from './components/viajes/viajes.component';
 import { BlockVisitComponent } from './components/views/entry/block-visit/block-visit.component'
 import { ScheduleComponent } from './components/views/nannies/schedule/schedule.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -32,6 +34,7 @@ import { FiltersPlanComponent } from './components/views/tourist-plan/filters-pl
 import { TitledescComponent } from './components/views/new-trip/titledesc/titledesc.component';
 import { FormNewtripComponent } from './components/views/new-trip/form-newtrip/form-newtrip.component';
 import { ContainerTravelComponent } from './components/views/tourist-plan/container-travel/container-travel.component';
+
 
 
 
@@ -55,11 +58,15 @@ import { ContainerTravelComponent } from './components/views/tourist-plan/contai
     SidebarComponent,
     BlockNewTripComponent,
     BlockVisitComponent,
+    ViajesComponent,
     ScheduleComponent,
-    FiltersPlanComponent,    
+    FiltersPlanComponent,
     TitledescComponent,
     FormNewtripComponent,
     ContainerTravelComponent,
+
+    FormNewtripComponent,
+
 
   ],
   imports: [

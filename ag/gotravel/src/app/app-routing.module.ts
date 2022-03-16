@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 // My imports
 import { HomeComponent } from './components/views/home/home.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { LoginComponent } from './components/views/login/login.component';
 import { MoneyConverterComponent } from './components/views/money-converter/money-converter.component';
 import { NanniesComponent } from './components/views/nannies/nannies.component';
@@ -13,6 +14,7 @@ import { TouristPlanComponent } from './components/views/tourist-plan/tourist-pl
 import { AboutUsComponent } from './components/views/home/about-us/about-us.component';
 import { FooterComponent } from './footer/footer.component';
 import { EntryComponent } from './components/views/entry/entry.component';
+import { ViajesComponent } from './components/viajes/viajes.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -23,7 +25,10 @@ const routes: Routes = [
   { path: 'publictrip', component: PublicTripComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'plan', component: TouristPlanComponent },
-  { path: 'sesion', component: EntryComponent }
+  { path: 'sesion', component: EntryComponent },
+  // { path: 'ver-viajes', component: SidebarComponent },
+   { path: 'viajes', component: ViajesComponent },
+
 ];
 
 @NgModule({
