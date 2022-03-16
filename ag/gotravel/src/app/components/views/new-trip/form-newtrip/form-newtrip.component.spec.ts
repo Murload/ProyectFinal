@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProofsideComponent } from './proofside.component';
+import { FormNewtripComponent } from './form-newtrip.component';
 
-describe('ProofsideComponent', () => {
-  let component: ProofsideComponent;
-  let fixture: ComponentFixture<ProofsideComponent>;
+describe('FormNewtripComponent', () => {
+  let component: FormNewtripComponent;
+  let fixture: ComponentFixture<FormNewtripComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProofsideComponent ]
+      declarations: [ FormNewtripComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProofsideComponent);
+    fixture = TestBed.createComponent(FormNewtripComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

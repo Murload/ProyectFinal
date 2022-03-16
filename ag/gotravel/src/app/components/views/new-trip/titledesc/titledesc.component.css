@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+p, h2{
+  font-family: 'Fredoka', sans-serif;
+}
+
+.titledesc {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2vh;
+  left: 25%;
+  top: 5%;
+  width: 70vw;
+  height: 30vh;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.title-plan {
+  max-width: 50vw;
+  max-height: 10vh;
+}
+
+.title-plan h2{
+  margin: 0;
+  color: black;
+  font-weight: 500;
+}
+
+.text-plan {
+  margin-bottom: 0px;
+  max-width: 50vw;
+  max-height: 30vh;
+  overflow: auto;
+  background-color: #E7e7e7;
+  border-radius: 10px;
+}
+
+.text-plan p{
+  margin: 0px;
+  padding: 3vh;
+}
