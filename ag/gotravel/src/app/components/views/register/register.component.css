@@ -1,0 +1,69 @@
+.container {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+}
+
+.container > .contents_container {
+	-webkit-flex: auto;
+	
+}
+
+.container > .img_container {
+    width: 40rem;
+}
+.contents_container{
+    margin-left: 110px;
+    margin-top: 130px;
+    width: 10px;
+ 
+    
+}
+
+.contents_container input {
+    width: 400px;
+    outline: 0;
+    border-width: 0 0 2px;
+    margin-top: 20px;
+
+}
+
+
+.contents_container button{
+    width: 400px;
+    margin-top: 20px;
+}
+.contents_container select{
+    width: 400px;
+    
+    color: gray;
+    margin-top: 20px;
+
+}
+.img_container{
+    margin-right: 0px;
+    text-align: center;
+    margin-top: 75px;
+    color: rgb(77, 212, 134);
+    font-size: 50px;
+}
+.img_container b{
+    color: rgb(27, 138, 158);
+    
+}
+
+.img_container img{
+    width: 600px; 
+}
+
+span{
+    color: red;
+    font-size: 13px;
+
+}
+.img_regis{
+    margin-top: -100px;
+
+
+}

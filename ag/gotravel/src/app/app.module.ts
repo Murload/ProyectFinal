@@ -14,11 +14,13 @@ import { NewTripComponent } from './components/views/new-trip/new-trip.component
 import { PublicTripComponent } from './components/views/public-trip/public-trip.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { Section1Component } from './components/views/home/section1/section1.component';
+import { AboutUsComponent } from './components/views/home/about-us/about-us.component';
+import { OurServicesComponent } from './components/views/home/our-services/our-services.component';
+import { FooterComponent } from './footer/footer.component';
 import { EntryComponent } from './components/views/entry/entry.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { ProofsideComponent } from './components/views/entry/proofside/proofside.component';
 import { BlockNewTripComponent } from './components/views/entry/block-new-trip/block-new-trip.component';
-import { BlockVisitComponent } from './components/views/entry/block-visit/block-visit.component';
+import { BlockVisitComponent } from './components/views/entry/block-visit/block-visit.component'
 import { ScheduleComponent } from './components/views/nannies/schedule/schedule.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -26,6 +28,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
+import { FiltersPlanComponent } from './components/views/tourist-plan/filters-plan/filters-plan.component';
+import { TitledescComponent } from './components/views/new-trip/titledesc/titledesc.component';
+import { FormNewtripComponent } from './components/views/new-trip/form-newtrip/form-newtrip.component';
+
 
 
 @NgModule({
@@ -41,12 +47,18 @@ import { MatIconModule } from '@angular/material/icon';
     PublicTripComponent,
     NavbarComponent,
     Section1Component,
+    AboutUsComponent,
+    OurServicesComponent,
+    FooterComponent,
     EntryComponent,
     SidebarComponent,
-    ProofsideComponent,
     BlockNewTripComponent,
     BlockVisitComponent,
     ScheduleComponent
+    FiltersPlanComponent,    
+    TitledescComponent,
+    FormNewtripComponent,
+
   ],
   imports: [
     BrowserModule,
