@@ -18,10 +18,12 @@ import { OurServicesComponent } from './components/views/home/our-services/our-s
 import { FooterComponent } from './footer/footer.component';
 import { EntryComponent } from './components/views/entry/entry.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { ProofsideComponent } from './components/views/entry/proofside/proofside.component';
 import { BlockNewTripComponent } from './components/views/entry/block-new-trip/block-new-trip.component';
 import { BlockVisitComponent } from './components/views/entry/block-visit/block-visit.component';
 import { FiltersPlanComponent } from './components/views/tourist-plan/filters-plan/filters-plan.component';
+import { TitledescComponent } from './components/views/new-trip/titledesc/titledesc.component';
+import { FormNewtripComponent } from './components/views/new-trip/form-newtrip/form-newtrip.component';
+
 
 
 @NgModule({
@@ -42,10 +44,12 @@ import { FiltersPlanComponent } from './components/views/tourist-plan/filters-pl
     FooterComponent,
     EntryComponent,
     SidebarComponent,
-    ProofsideComponent,
     BlockNewTripComponent,
     BlockVisitComponent,
-    FiltersPlanComponent,
+    FiltersPlanComponent,    
+    TitledescComponent,
+    FormNewtripComponent,
+
   ],
   imports: [
     BrowserModule,
