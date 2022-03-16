@@ -31,6 +31,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { FiltersPlanComponent } from './components/views/tourist-plan/filters-plan/filters-plan.component';
 import { TitledescComponent } from './components/views/new-trip/titledesc/titledesc.component';
 import { FormNewtripComponent } from './components/views/new-trip/form-newtrip/form-newtrip.component';
+import { ContainerTravelComponent } from './components/views/tourist-plan/container-travel/container-travel.component';
 
 
 
@@ -58,6 +59,7 @@ import { FormNewtripComponent } from './components/views/new-trip/form-newtrip/f
     FiltersPlanComponent,    
     TitledescComponent,
     FormNewtripComponent,
+    ContainerTravelComponent,
 
   ],
   imports: [
