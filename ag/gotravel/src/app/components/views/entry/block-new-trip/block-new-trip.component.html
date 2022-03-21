@@ -1,49 +1,53 @@
 
-<section class="new_trip">
+<section class="new_trip"  >
 
-  <!-- <div> -->
-    <div class="title_trips">
-      <h2> Tus últimos Viajes </h2>
-    </div>
+  <div class="title_trips">
+    <h2> Tus últimos Viajes </h2>
+  </div>
 
-    <div class="trips_divs">
+  <div class="content_trips" >
+
+    <!-- <div class="trips_divs"> -->
       <div class="add_trip">
-        <a [routerLink]="['/newtrip']" >
+        <div class="content_add">
+          <a [routerLink]="['/newtrip']" >
 
-          <img src="assets/img/addicon.png" alt="icon">
-        </a>
-        <h4> Crear nuevo Viaje</h4>
+            <img src="assets/img/addicon.png" alt="icon">
+          </a>
+          <h4> Crear nuevo Viaje</h4>
+        </div>
       </div>
-
-      <div class="default_div">
-        <img src="assets/img/gallery/imgdefa.png" alt="default">
-        <!-- <div class="descrip_div"></div> -->
-        <p>
-          Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit.
-        </p>
-      </div>
-      <div class="default_div">
-        <img src="assets/img/gallery/paris.jpg" alt="default">
-        <!-- <div class="descrip_div"></div> -->
-        <p>
-          Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit.
-        </p>
-      </div>
-      <div class="default_div">
-        <img src="assets/img/gallery/beach.jpg" alt="default">
-        <!-- <div class="descrip_div"></div> -->
-        <p>
-          Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit.
-        </p>
-      </div>
-
     <!-- </div> -->
 
 
-  </div>
+    <div class="divs_info_trips" >
+
+        <div class="if_notrip" *ngIf="listPrivTrips.length == 0" >
+
+          <!-- <img src="assets/img/gallery/imgdefa.png" alt="default"> -->
+          <p>
+            Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit.
+          </p>
+        </div>
+
+      <div class="default_div" *ngFor="let newtrip of listPrivTrips">
+        <img src="assets/img/gallery/beach.jpg" alt="default">
+        <p>
+          {{ newtrip.name }}
+        <br>
+          {{ newtrip.origin }}
+        <br>
+          {{ newtrip.destiny }}
+        </p>
+      </div>
+
+    </div>
+</div>
+    <!-- </div> -->
+
+
+
 
 
 

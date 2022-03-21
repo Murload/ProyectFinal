@@ -6,7 +6,7 @@
       <input type="text" placeholder="Nombre Nuevo Viaje...">
     </fieldset>
 
-    <fieldset >
+    <fieldset class="field">
       <legend> Lugar de Destino</legend>
       <div class="destiny">
         <input type="text" placeholder="De dónde vienes...">
@@ -14,19 +14,20 @@
       </div>
     </fieldset>
 
-    <fieldset >
+    <fieldset class="field">
       <legend>Fecha</legend>
 
       <div class="calender">
+        <label for="start_day">Día de Inicio</label>
+        <input type="date" name="start_day" id="startday">
 
-        calender...
-
-
+        <label for="end_day">Día de finalización</label>
+        <input type="date" name="end_day" id="enday">
 
       </div>
     </fieldset>
 
-    <fieldset >
+    <fieldset class="field">
       <legend>Pasajeros</legend>
 
       <div>
@@ -35,30 +36,48 @@
 
     </fieldset>
 
-    <fieldset >
+    <fieldset class="field">
       <legend>Presupuesto</legend>
       <div>
         <input type="text" placeholder="Tu presupuesto...">
       </div>
     </fieldset>
 
-    <fieldset >
+    <fieldset class="wish_list">
 
       <p>¿Quieres añadir una lista de deseos? <br>
         Puedes añadirla cuando lo desees!</p>
 
-      <div>
+      <div class="option">
         <input type="radio" id="yeslist" name="answ" value="Yes">
-        <label for="huey">Si</label>
+        <label for="answ">Si</label>
       </div>
 
-      <div>
-        <input type="radio" id="nolist" name="answ" value="No">
-        <label for="dewey">No</label>
+      <div class="option" style= 'margin-left:8px' >
+        <input type="radio" id="nolist" name="answ1" value="No">
+        <label for="answ1">No</label>
       </div>
 
 
     </fieldset>
+
+    <!-- <fieldset class="wish_list"> // niñeras
+
+      <p>¿Quieres añadir una lista de deseos?<br>
+        Puedes añadirla cuando lo desees!</p>
+
+      <div class="option">
+        <input type="radio" id="yeslist" name="answ" value="Yes">
+        <label for="answ">Si</label>
+      </div>
+
+      <div class="option" style= 'margin-left:8px' >
+        <input type="radio" id="nolist" name="answ1" value="No">
+        <label for="answ1">No</label>
+      </div>
+
+
+    </fieldset> -->
 
     <div class="bottom_sub">
       <button type="submit">Submit</button>

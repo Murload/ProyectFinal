@@ -9,22 +9,20 @@ p, h2{
   flex-direction: column;
   justify-content: center;
   /* size */
-  width: 73%;
-  height: 55%;
-  position: absolute;
-  left: 280px;
+  min-height: 75%;
+  max-height: 100%;
+  width: 100%;
   margin: 2.5vw;
   /* color */
   border-radius: 15px;
   background-color: #e7e7e7;
-
-
 }
+
 
 .title_trips {
   display: flex;
   justify-content: center;
-
+  margin: 1%;
 }
 
 
@@ -36,28 +34,47 @@ p, h2{
 
 .trips_divs {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   gap: 20px;
-  /* border: 5px rgb(38, 123, 233) solid; */
   min-height: 50%;
   max-height: 75%;
   margin: 15px;
 }
 
 /* add new trip */
+
+/* main trips */
+.content_trips {
+  display:flex;
+  justify-content: center;
+  column-gap: 5%;
+  margin: 3%;
+}
+
+
+
 .add_trip {
   display: flex;
   flex-direction: column;
-  align-self: center;
-  /* border: 6px purple solid; */
-  height: 60%;
+  justify-content: center;
   min-width: 20%;
-  max-width: 35%;
+  max-width: 60%;
+  /* min-height: 55%;
+  max-height: 90%; */
+}
+
+.content_add {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
+  min-height: 50%;
+  max-height: 90%;
   background-color: rgb(255, 255, 255);
+
 }
+
 
 .add_trip a img{
   max-width: 125%;
@@ -65,8 +82,9 @@ p, h2{
 
 }
 .add_trip a img:hover {
-  /* max-width: 50%;
-  max-height: 70%; */
+
+  /* max-width: 25%;
+  max-height: 1000%; */
   width: 105%;
   height: 105%;
 }
@@ -81,34 +99,62 @@ p, h2{
   overflow: hidden;
 }
 
+/* text if doesn't exist trips */
+
+
+.if_notrip {
+
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.if_notrip p{
+  padding: 10%;
+  font-size: 15px;
+  color: black;
+}
+/* ------NO TRIPS------ */
+
 /* older trips */
+
+.divs_info_trips {
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 8%;
+  row-gap: 3%;
+}
+
+
 .default_div {
   display: flex;
   flex-direction: column;
   row-gap: 5%;
-  min-width: 20%;
-  max-width: 35%;
-  min-height: 40%;
-  max-height: 100%;
+
+  max-width: 25%;
+  max-height: 85%;
   background-color: white;
 
 }
 
-.default_div img {
+
+
+.default_div  img {
   /* background-size: cover; */
   min-width: 60%;
   max-width: 100%;
   min-height: 10%;
   max-height: 55%;
 }
-.default_div p {
+.default_div  p {
   min-width: 60%;
   max-width: 100%;
   min-height: 20%;
-  max-height: 42%;
-  font-size: 1.4vw;
+  max-height: 35%;
+  font-size: 1.1vw;
+  padding: 2%;
   overflow: auto;
   text-align: center;
-  margin: 0;
   color: black;
 }
+
