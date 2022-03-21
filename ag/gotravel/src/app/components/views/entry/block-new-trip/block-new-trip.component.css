@@ -59,10 +59,16 @@ p, h2{
   background-color: rgb(255, 255, 255);
 }
 
-.add_trip img {
-  max-width: 35%;
-  max-height: 60%;
+.add_trip a img{
+  max-width: 125%;
+  max-height: 150%;
 
+}
+.add_trip a img:hover {
+  /* max-width: 50%;
+  max-height: 70%; */
+  width: 105%;
+  height: 105%;
 }
 .add_trip h4 {
   text-align: center;

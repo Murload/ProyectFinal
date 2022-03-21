@@ -21,7 +21,6 @@ import { FooterComponent } from './footer/footer.component';
 import { EntryComponent } from './components/views/entry/entry.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { BlockNewTripComponent } from './components/views/entry/block-new-trip/block-new-trip.component';
-import { ViajesComponent } from './components/viajes/viajes.component';
 import { BlockVisitComponent } from './components/views/entry/block-visit/block-visit.component'
 import { ScheduleComponent } from './components/views/nannies/schedule/schedule.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -33,6 +32,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { FiltersPlanComponent } from './components/views/tourist-plan/filters-plan/filters-plan.component';
 import { TitledescComponent } from './components/views/new-trip/titledesc/titledesc.component';
 import { FormNewtripComponent } from './components/views/new-trip/form-newtrip/form-newtrip.component';
+import { OtherTripsComponent } from './components/views/other-trips/other-trips.component';
 
 
 
@@ -57,11 +57,11 @@ import { FormNewtripComponent } from './components/views/new-trip/form-newtrip/f
     SidebarComponent,
     BlockNewTripComponent,
     BlockVisitComponent,
-    ViajesComponent,
     ScheduleComponent,
     FiltersPlanComponent,
     TitledescComponent,
-    FormNewtripComponent
+    FormNewtripComponent,
+    OtherTripsComponent
 
   ],
   imports: [
