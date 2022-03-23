@@ -2,12 +2,20 @@
 p, h3{
   font-family: 'Fredoka', sans-serif;
 }
+
+.input-group {
+  width: auto;
+  height: 50px;
+  margin: auto;
+}
 .card {
 align-items: center;
 text-align: center;
 margin: auto;
-width: 55%;
+width: auto;
 border-radius: 20px;
+display: grid;
+grid-auto-rows: 1fr;
 }
 img{
   width: 150px;
@@ -17,11 +25,11 @@ img{
 .babysitter {
   /* flex */
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   /* size */
-  width: 73%;
-  height: 55%;
+  width: 75%;
+  height: 85%;
   position: absolute;
   left: 280px;
   margin: 2.5vw;

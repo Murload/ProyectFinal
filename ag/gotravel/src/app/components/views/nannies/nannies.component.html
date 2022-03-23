@@ -1,39 +1,24 @@
   <app-sidebar></app-sidebar>
 <section class="babysitter">
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
-      <div class="card">
-        <img src="../../../../assets/img/nannies/niñera(1).jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Disponible</h5>
-          <p class="card-text">Natalia Madero.</p>
-          <button type="button" class="btn btn-success">Seleccionar</button>
-        </div>
-      </div>
-    </div>
 
-    <div class="col">
-      <div class="card">
-        <img src="../../../../assets/img/nannies/niñera(1).jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Disponible</h5>
-          <p class="card-text"> Martina Ferrer.</p>
-          <button type="button" class="btn btn-success">Seleccionar</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="card">
-        <img src="../../../../assets/img/nannies/niñera(1).jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Disponible</h5>
-          <p class="card-text">Carolina Padrón</p>
-          <button type="button" class="btn btn-success">Seleccionar</button>
-        </div>
-      </div>
-    </div>
+  <div class="input-group">
+    <input type="text" class="form-control" placeholder="Introduza el país" aria-label="Recipient's username" aria-describedby="button-addon2">
+    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
   </div>
+  <br>
+  <div class="row">
+      <div class="card" *[ngIf]="nannyList.length > 0">
+      </div>
+    </div>
+      <div class="card"*ngFor="let _datanannie of nannyList">
+        <img src="../../../../assets/img/clients/client-3.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">{{_datanannie.name}} {{_datanannie.lastName}}</p>
+          <p class="card-text"> ${{_datanannie.price}}</p>
+          <p class="card-text">Edad: {{_datanannie.age}}</p>
+        </div>
+      </div>
 </section>
-<app-schedule></app-schedule>
+
+  
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Nannie } from 'src/app/models/nannies'; 
+import { NanniesService } from 'src/app/services/nannies.service';
 
 @Component({
   selector: 'app-nannies',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NanniesComponent implements OnInit {
 
-  constructor() { }
+  nannyList: Nannie[] = []
+
+  constructor(private _nanniesServices: NanniesService) { }
 
   ngOnInit(): void {
+    this.showNannies()
   }
 
-}
+
+  showNannies(){
+    this._nanniesServices.getNannies().subscribe(data => {
+      console.log(data);
+      this.nannyList = data
+    }, error => {
+      console.log(error)
+    })
+  
+  }
+
+
+}  
