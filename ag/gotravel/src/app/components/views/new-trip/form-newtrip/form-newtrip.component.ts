@@ -4,8 +4,12 @@ import { Component, OnInit } from '@angular/core';
 
 import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { PrivTrip } from 'src/app/models/entry/PrivTrip';
-import { UsersPrivTripsService } from '../../../../services/entry/users-priv-trips.service';
+import { Nannies } from '../../../../models/entry/Nannies';
+import { NanaAllService } from 'src/app/services/entry/nana-all.service';
+
+import { UsersPrivTripsService } from 'src/app/services/entry/users-priv-trips.service';
+
+import { PrivTrip } from '../../../../models/entry/PrivTrip';
 
 
 
@@ -19,15 +23,23 @@ import { UsersPrivTripsService } from '../../../../services/entry/users-priv-tri
 
 export class FormNewtripComponent implements OnInit {
 
+  // variables
   newTripForm : FormGroup;
 
   yes = 0;
+
+  listNanas: Nannies[] = [];
+
+  textoDeInput = '';
+
 
 
   numbers = /^([0-9])*$/;
 
 
-  constructor( private fb: FormBuilder, private privateService: UsersPrivTripsService, private router: Router) {
+  constructor( private fb: FormBuilder, private privateService: UsersPrivTripsService,
+    private router: Router,  private nanaServ : NanaAllService) {
+
 
     this.newTripForm = this.fb.group({
       name: ['', Validators.required],
@@ -42,7 +54,13 @@ export class FormNewtripComponent implements OnInit {
 
   }
 
+
+
   ngOnInit(): void {
+
+
+      this.consultNannies();
+
   }
 
   // methods
@@ -65,6 +83,16 @@ export class FormNewtripComponent implements OnInit {
       this.router.navigate(['/sesion']);
     }, err => {} );
 
+  }
+
+  consultNannies() {
+    this.nanaServ.getAllNannies().subscribe( data => {
+      console.log(data);
+      this.listNanas = data;
+
+    }, error => {
+      console.log(error);
+    } );
   }
 
 

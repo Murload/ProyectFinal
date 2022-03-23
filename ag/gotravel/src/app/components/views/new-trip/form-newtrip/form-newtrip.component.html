@@ -20,11 +20,13 @@
         Debes llenar este campo!
       </div>
         <label for="destiny">Lugar de destino</label>
-        <input type="text" formControlName="destiny" placeholder="A dónde vas...">
+        <input [(ngModel)]='textoDeInput' type="text" formControlName="destiny" placeholder="A dónde vas...">
+
         <div class="alert alert-info" *ngIf="newTripForm.get('destiny')?.hasError('required')
           && newTripForm.get('destiny')?.touched">
           Debes llenar este campo!
         </div>
+
       </div>
 
     </fieldset>
@@ -93,12 +95,12 @@
 
 
         <div class="option">
-          <input [(ngModel)]="yes" [value]="1" [ngModelOptions]="{standalone: true}" type="radio" name="yes" value="true" >
+          <input [(ngModel)]="yes" [value]="1" [ngModelOptions]="{standalone: true}" type="radio" name="yes"  >
           <label for="answ">Si</label>
         </div>
 
         <div class="option" style= 'margin-left:8px' >
-          <input [(ngModel)]="yes" [value]="0" [ngModelOptions]="{standalone: true}" type="radio" name="yes" value="No">
+          <input [(ngModel)]="yes" [value]="0" [ngModelOptions]="{standalone: true}" type="radio" name="yes" >
           <label for="answ1">No</label>
         </div>
 
@@ -109,7 +111,18 @@
 
         <legend>Niñeras</legend>
         <div class="destiny">
-          <input type="text" formControlName="nannies" placeholder="Nombre Niñera">
+          <!-- <input type="text" formControlName="nannies" placeholder="Nombre Niñera"> -->
+          <!--  -->
+          <!-- <div *ngIf='textoDeInput'> -->
+
+            <select name="nanas" *ngIf="textoDeInput" >
+              <option formControlName="nannies" value=""  *ngFor="let i of listNanas" >
+
+                  {{  i.name }}
+
+              </option>
+            </select>
+          <!-- </div> -->
         </div>
 
 

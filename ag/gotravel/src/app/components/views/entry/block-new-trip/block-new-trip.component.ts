@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 
-
+// services
 import { UsersPrivTripsService } from 'src/app/services/entry/users-priv-trips.service';
+
 import { PrivTrip } from '../../../../models/entry/PrivTrip';
+
 
 @Component({
   selector: 'app-block-new-trip',
@@ -15,6 +17,7 @@ export class BlockNewTripComponent implements OnInit {
   constructor( private PrivService : UsersPrivTripsService ) { }
 
   listPrivTrips: PrivTrip[] = [];
+
 
 
   ngOnInit(): void {
@@ -31,5 +34,7 @@ export class BlockNewTripComponent implements OnInit {
       console.log(error);
     } );
   }
+
+
 
 }
