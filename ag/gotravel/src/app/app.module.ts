@@ -2,7 +2,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatSliderModule } from '@angular/material/slider'
 
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
+// Reactive forms
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -68,6 +72,7 @@ import { OtherTripsComponent } from './components/views/other-trips/other-trips.
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     MatSliderModule,
     MatDatepickerModule,
@@ -75,7 +80,8 @@ import { OtherTripsComponent } from './components/views/other-trips/other-trips.
     MatNativeDateModule ,
     MatInputModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,10 +7,10 @@ export class PrivTrip {
     date: Date;
     passengers: number;
     budget: number;
-    wishlist: []; // cambiar a Array<string> por si se requiere
+    wishlist: Array<string>; // cambiar a Array<string> por si se requiere
     nannies: object;
 
-    constructor( name:string, origin:string, destiny:string, date:Date, passengers:number, budget: number, wishlist:[], nannies: object) {
+    constructor( name:string, origin:string, destiny:string, date:Date, passengers:number, budget: number, wishlist:Array<string>, nannies: object) {
 
       this.name = name;
       this.origin = origin;
