@@ -23,6 +23,13 @@ import { PrivTrip } from '../../../../models/entry/PrivTrip';
 
 export class FormNewtripComponent implements OnInit {
 
+  textoDeInput = '';
+
+  onBlur(): void {
+    // this.consultNannies();
+    console.log('Blur');
+  }
+
   // variables
   newTripForm : FormGroup;
 
@@ -30,7 +37,7 @@ export class FormNewtripComponent implements OnInit {
 
   listNanas: Nannies[] = [];
 
-  textoDeInput = '';
+
 
 
 
@@ -59,7 +66,7 @@ export class FormNewtripComponent implements OnInit {
   ngOnInit(): void {
 
 
-      this.consultNannies();
+
 
   }
 
@@ -85,15 +92,15 @@ export class FormNewtripComponent implements OnInit {
 
   }
 
-  consultNannies() {
-    this.nanaServ.getAllNannies().subscribe( data => {
-      console.log(data);
-      this.listNanas = data;
+  // consultNannies() {
+  //   this.nanaServ.getNanaCountry({ "country": "colombia" }).subscribe( data => {
+  //     console.log(this.textoDeInput);
+  //     // this.listNanas = data;
 
-    }, error => {
-      console.log(error);
-    } );
-  }
+  //   }, error => {
+  //     console.log(error);
+  //   } );
+  // }
 
 
 

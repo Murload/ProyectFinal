@@ -10,6 +10,7 @@ import { Nannies } from '../../models/entry/Nannies';
 export class NanaAllService {
 
   url_api = 'http://localhost:3000/api/nannies'
+  url_apiCountry = 'http://127.0.0.1:3000/api/nannies/country'
 
 
   constructor( private http:HttpClient ) { }
@@ -18,8 +19,8 @@ export class NanaAllService {
     return this.http.get(this.url_api);
   }
 
-  // getNanaCountry( cont: Nannies ): Observable<any> {
-  //   return this.http.get(this.url_api);
+  // getNanaCountry( cont: Object ): Observable<any> {
+  //   return this.http.get(this.url_apiCountry, cont);
   // }
 
 }
