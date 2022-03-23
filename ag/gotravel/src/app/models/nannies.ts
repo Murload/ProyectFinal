@@ -1,18 +1,20 @@
 export class Nannie{
     _id?: any;
-    name!: string;
-    lastName!: string;
-    country!: string;
-    bornCountry!: string;
-    age!: number;
+    name: string;
+    lastName: string;
+    country: string;
+    bornCountry: string;
+    age: number;
     description!: string;
-    price!: number;
-    experience!: string;
-    criminalRecord!: boolean;
+    price: number;
+    experience: string;
+    criminalRecord: boolean;
+    available: boolean;
+    phone: number;
 
-    Constructor(name: string, lastName: string, country: string, bornCountry: string, 
+    constructor(name: string, lastName: string, country: string, bornCountry: string, 
         age: number, description: string, price: number,
-    experience: string, criminalRecord: boolean){
+    experience: string, criminalRecord: boolean, available: boolean, phone: number){
         this.name = name;
         this.lastName = lastName;
         this.country = country;
@@ -21,6 +23,8 @@ export class Nannie{
         this.description = description;
         this.price = price;
         this.experience = experience;
-        this.criminalRecord = criminalRecord
+        this.criminalRecord = criminalRecord;
+        this.available = available;
+        this.phone = phone
     }
 }

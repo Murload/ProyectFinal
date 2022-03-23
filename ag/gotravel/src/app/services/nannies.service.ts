@@ -9,10 +9,13 @@ import { Observable } from 'rxjs';
 export class NanniesService {
 
   urlApi = 'http://127.0.0.1:3000/api/nannies';
+  urlApiCountry = 'http://127.0.0.1:3000/api/nannies/country';
 
   constructor(private http:HttpClient) { }
 
   getNannies(): Observable<any>{
     return this.http.get(this.urlApi);
-  }
-}  
+      
+    }
+      
+    }
