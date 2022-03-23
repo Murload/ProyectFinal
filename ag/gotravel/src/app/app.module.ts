@@ -38,6 +38,7 @@ import { FiltersPlanComponent } from './components/views/tourist-plan/filters-pl
 import { TitledescComponent } from './components/views/new-trip/titledesc/titledesc.component';
 import { FormNewtripComponent } from './components/views/new-trip/form-newtrip/form-newtrip.component';
 import { OtherTripsComponent } from './components/views/other-trips/other-trips.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 
@@ -66,7 +67,8 @@ import { OtherTripsComponent } from './components/views/other-trips/other-trips.
     FiltersPlanComponent,
     TitledescComponent,
     FormNewtripComponent,
-    OtherTripsComponent
+    OtherTripsComponent,
+    ModalComponent
 
   ],
   imports: [

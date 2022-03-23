@@ -36,5 +36,9 @@ export class BlockNewTripComponent implements OnInit {
   }
 
 
+  updatePrivTrips() {
+
+  }
+
 
 }
