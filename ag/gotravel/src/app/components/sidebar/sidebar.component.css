@@ -19,8 +19,8 @@
   left: 0;
   width: 22%;
   height: 100%;
-  background: linear-gradient(45deg, rgb(0, 195, 255),  #00e1ff, #06fa2f);
-  box-shadow: 8px 1px 15px #cacaca;
+  background: linear-gradient(45deg, rgb(0, 195, 255),  #00ffbf, #06fa63);
+  box-shadow: 8px 1px 15px #c0c0c0;
   flex-flow: column wrap;
   padding: 20px;
   position: fixed;

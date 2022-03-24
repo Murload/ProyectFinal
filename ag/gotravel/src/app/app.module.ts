@@ -39,6 +39,7 @@ import { TitledescComponent } from './components/views/new-trip/titledesc/titled
 import { FormNewtripComponent } from './components/views/new-trip/form-newtrip/form-newtrip.component';
 import { OtherTripsComponent } from './components/views/other-trips/other-trips.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -83,7 +84,8 @@ import { ModalComponent } from './components/modal/modal.component';
     MatInputModule,
     MatIconModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

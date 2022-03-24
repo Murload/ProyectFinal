@@ -1,5 +1,165 @@
+<ng-template #contenido let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Titulo del Modal</h4>
+    <button class="close" aria-label="close" type="button" (click)="modal.dismiss()" >
+      <span aria-hidden="true" >&times;</span>
+    </button>
+  </div>
 
-<section class="new_trip"  >
+  <div class="modal-body">
+
+      <form class="form_here" [formGroup]="newTripForm" (ngSubmit)="editTrip()" >
+
+        <fieldset class="nam_newtrip">
+          <legend> Nombre del Viaje </legend>
+          <input type="text"  formControlName="name" placeholder="Nombre Nuevo Viaje...">
+          <div class="alert alert-info" *ngIf="newTripForm.get('name')?.hasError('required')
+          && newTripForm.get('name')?.touched">
+          Debes llenar este campo!
+        </div>
+      </fieldset>
+
+      <fieldset class="field">
+        <legend> Lugar de Destino</legend>
+        <div class="destiny">
+            <label for="origin">Lugar de Origen</label>
+            <input type="text" formControlName="origin" placeholder="De dónde vienes...">
+            <div class="alert alert-info" *ngIf="newTripForm.get('origin')?.hasError('required')
+            && newTripForm.get('origin')?.touched">
+            Debes llenar este campo!
+          </div>
+            <label for="destiny">Lugar de destino</label>
+            <input (blur) = 'onBlur()' [(ngModel)]='textoDeInput' type="text" formControlName="destiny" placeholder="A dónde vas...">
+
+            <div   class="alert alert-info" *ngIf="newTripForm.get('destiny')?.hasError('required')
+              && newTripForm.get('destiny')?.touched">
+              Debes llenar este campo!
+            </div>
+
+          </div>
+
+        </fieldset>
+
+        <fieldset class="field">
+          <legend>Fecha</legend>
+
+          <div class="destiny">
+            <label for="start_day">Día de Inicio</label>
+            <input type="date" formControlName="date" name="start_day" id="startday">
+            <div class="alert alert-info" *ngIf="newTripForm.get('date')?.hasError('required')
+              && newTripForm.get('date')?.touched">
+              Debes llenar este campo!
+            </div>
+
+            <label for="end_day">Día de finalización</label>
+            <input type="date" formControlName="date" name="end_day" id="enday">
+            <div class="alert alert-info" *ngIf="newTripForm.get('date')?.hasError('required')
+          && newTripForm.get('date')?.touched">
+              Debes llenar este campo!
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="field">
+          <legend>Pasajeros</legend>
+
+          <div class="destiny">
+            <!-- <input type="text" formControlName="passengers" placeholder="Cuántas personas van..."> -->
+            <select formControlName="passengers">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6+</option>
+            </select>
+            <div class="alert alert-info" *ngIf="newTripForm.get('passengers')?.hasError('required')
+          && newTripForm.get('passengers')?.touched">
+              Debes llenar este campo!
+            </div>
+          </div>
+
+        </fieldset>
+
+        <fieldset class="field">
+          <legend>Presupuesto</legend>
+          <div class="destiny">
+            <input type="text" formControlName="budget" placeholder="Tu presupuesto...">
+            <div class="alert alert-info" *ngIf="newTripForm.get('budget')?.hasError('required')
+          && newTripForm.get('budget')?.touched">
+              Debes llenar este campo!
+            </div>
+            <div class="alert alert-danger" *ngIf="newTripForm.get('budget')?.hasError('pattern')">
+              Debe ser un número!
+            </div>
+          </div>
+        </fieldset>
+
+
+        <fieldset class="wish_list">
+
+          <p>¿Quieres añadir una lista de deseos?<br>
+            Puedes añadirla cuando lo desees!</p>
+
+
+
+            <div class="option">
+              <input [(ngModel)]="yes" [value]="1" [ngModelOptions]="{standalone: true}" type="radio" name="yes"  >
+              <label for="answ">Si</label>
+            </div>
+
+            <div class="option" style= 'margin-left:8px' >
+              <input [(ngModel)]="yes" [value]="0" [ngModelOptions]="{standalone: true}" type="radio" name="yes" >
+              <label for="answ1">No</label>
+            </div>
+
+            <textarea formControlName="wishlist"  name="yestext" cols="30" rows="10" *ngIf=" yes == 1 " ></textarea>
+
+          </fieldset>
+          <!-- <fieldset class="field">
+
+            <legend>Niñeras</legend>
+            <div class="destiny">
+
+
+                <select name="nanas" *ngIf="textoDeInput" >
+                  <option formControlName="nannies" value=""  *ngFor="let i of listNanas" >
+
+                      {{  i.name }}
+
+                  </option>
+                </select>
+
+            </div>
+
+
+          </fieldset> -->
+
+        <div class="bottom_sub">
+          <button type="submit">Añadir</button>
+        </div>
+
+      </form>
+
+
+
+
+
+
+
+
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-success"  (click)="modal.close()">Ok!</button>
+  </div>
+
+</ng-template>
+
+
+
+
+<section class="new_trip" >
 
   <div class="title_trips">
     <h2> Tus últimos Viajes </h2>
@@ -30,8 +190,13 @@
           </p>
         </div>
 
-      <div class="default_div" *ngFor="let newtrip of listPrivTrips">
-        <img src="assets/img/gallery/beach.jpg" alt="default">
+      <div style="cursor: pointer"
+      class="default_div"
+      *ngFor="let newtrip of listPrivTrips"
+      (click)="openLG(contenido)"
+      (click)="func(newtrip)">
+
+        <img  src="assets/img/gallery/beach.jpg" alt="default">
         <p>
           {{ newtrip.name }}
         <br>
@@ -39,7 +204,9 @@
         <br>
           {{ newtrip.destiny }}
         </p>
+
       </div>
+
 
     </div>
 </div>

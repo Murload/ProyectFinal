@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 
 // import { FormsModule } from '@angular/forms';
 
 import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import { Nannies } from '../../../../models/entry/Nannies';
 import { NanaAllService } from 'src/app/services/entry/nana-all.service';
 
@@ -11,6 +11,7 @@ import { UsersPrivTripsService } from 'src/app/services/entry/users-priv-trips.s
 
 import { PrivTrip } from '../../../../models/entry/PrivTrip';
 
+import {  Router } from '@angular/router';
 
 
 
@@ -23,29 +24,25 @@ import { PrivTrip } from '../../../../models/entry/PrivTrip';
 
 export class FormNewtripComponent implements OnInit {
 
-  textoDeInput = '';
 
   onBlur(): void {
     // this.consultNannies();
     console.log('Blur');
   }
 
+  // para ingresar country
+  textoDeInput = '';
+
   // variables
   newTripForm : FormGroup;
-
   yes = 0;
-
   listNanas: Nannies[] = [];
-
-
-
-
-
   numbers = /^([0-9])*$/;
 
 
+
   constructor( private fb: FormBuilder, private privateService: UsersPrivTripsService,
-    private router: Router,  private nanaServ : NanaAllService) {
+    private router: Router) {
 
 
     this.newTripForm = this.fb.group({
@@ -57,7 +54,9 @@ export class FormNewtripComponent implements OnInit {
       budget: ['', [Validators.required, Validators.pattern(this.numbers)]],
       wishlist: [''],
       nannies: ['']
-    })
+    });
+
+
 
   }
 
@@ -74,6 +73,8 @@ export class FormNewtripComponent implements OnInit {
   addNewTrip() {
     console.log(this.newTripForm);
 
+
+
     const data_private: PrivTrip = {
       name: this.newTripForm.get('name')?.value,
       origin: this.newTripForm.get('origin')?.value,
@@ -83,12 +84,17 @@ export class FormNewtripComponent implements OnInit {
       budget: this.newTripForm.get('budget')?.value,
       wishlist: this.newTripForm.get('wishlist')?.value,
       nannies: this.newTripForm.get('nannies')?.value,
+
     }
 
     console.log(data_private);
     this.privateService.postNewTrip(data_private).subscribe( data => {
-      this.router.navigate(['/sesion']);
+
     }, err => {} );
+
+
+
+
 
   }
 
@@ -102,6 +108,26 @@ export class FormNewtripComponent implements OnInit {
   //   } );
   // }
 
+
+  createOK() {
+
+
+    Swal.fire({
+      icon: 'success',
+      iconColor: '#00FEB8',
+      title: 'Viaje Creado Correctamente!',
+      text: 'Volverás a la página principal donde verás tu nuevo viaje.',
+      showCloseButton: true,
+      confirmButtonText:'Vale!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.router.navigateByUrl('/sesion');
+      }
+    })
+
+
+
+  }
 
 
 }

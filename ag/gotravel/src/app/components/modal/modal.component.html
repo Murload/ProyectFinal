@@ -1,1 +1,22 @@
-<p>modal works!</p>
+<h1>Modal</h1>
+<hr>
+<ng-template #contenido let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Titulo del Modal</h4>
+    <button class="close" aria-label="close" type="button" (click)="modal.dismiss()" >
+      <span aria-hidden="true" >&times;</span>
+    </button>
+  </div>
+
+  <div class="modal-body">
+    Este es el contenido
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-success"  (click)="modal.close">Ok!</button>
+  </div>
+
+</ng-template>
+
+<button type="button"  class="btn btn-outline-danger" (click)="openSM(contenido)" >Lanzar Modal</button>
+<button type="button"  class="btn btn-outline-success" (click)="openLG(contenido)" >Lanzar Modal LG</button>
+<button type="button"  class="btn btn-outline-primary" (click)="openXL(contenido)" >Lanzar Modal XL</button>
