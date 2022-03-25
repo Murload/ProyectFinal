@@ -133,6 +133,7 @@ export class BlockNewTripComponent implements OnInit {
       }).then((result) => {
         if (result.isConfirmed) {
           this.router.navigateByUrl('/sesion');
+          this.consultPrivTrips();
         }
       })
     }, error => {
