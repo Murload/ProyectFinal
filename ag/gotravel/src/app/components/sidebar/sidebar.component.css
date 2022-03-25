@@ -19,7 +19,8 @@
   left: 0;
   width: 22%;
   height: 100%;
-  background: linear-gradient(45deg, #00a2ff, #05d675 );
+  background: linear-gradient(45deg, rgb(0, 195, 255),  #00ffbf, #06fa63);
+  box-shadow: 8px 1px 15px #c0c0c0;
   flex-flow: column wrap;
   padding: 20px;
   position: fixed;
@@ -29,14 +30,15 @@
 .side-options {
   display: flex;
   flex-flow: column wrap;
-  row-gap: 30px;
-  /* padding: 10px; */
+  row-gap: 4.5vh;
 }
 
 .side-icolink {
   display: flex;
   column-gap: 30px;
   margin: 10px;
+
+
 }
 
 
@@ -47,7 +49,8 @@
   color: black;
   font-family: 'Fredoka', sans-serif;
   font-weight: bolder;
-  font-size: 1.28vw;
+  /* font-size: 1.28vw; */
+  font-size: 100%;
   text-decoration: none;
 }
 
