@@ -26,11 +26,9 @@ import { EntryComponent } from './components/views/entry/entry.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { BlockNewTripComponent } from './components/views/entry/block-new-trip/block-new-trip.component';
 
-import { ViajesComponent } from './components/viajes/viajes.component';
+
 import { BlockVisitComponent } from './components/views/entry/block-visit/block-visit.component';
 
-import { BlockVisitComponent } from './components/views/entry/block-visit/block-visit.component'
-import { ScheduleComponent } from './components/views/nannies/schedule/schedule.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -72,21 +70,13 @@ import { SearchNanniesComponent } from './components/views/nannies/search-nannie
     SidebarComponent,
     BlockNewTripComponent,
     BlockVisitComponent,
-
-    ViajesComponent,
-
-    ScheduleComponent,
-
     FiltersPlanComponent,
     TitledescComponent,
     FormNewtripComponent,
-
     OtherTripsComponent,
     ModalComponent,
-
     ContainerTravelComponent,
     FormNewtripComponent,
-
     SearchNanniesComponent
 
 
@@ -101,12 +91,9 @@ import { SearchNanniesComponent } from './components/views/nannies/search-nannie
     MatFormFieldModule,
     MatNativeDateModule ,
     MatInputModule,
-
-    MatIconModule, 
+    MatIconModule,
     HttpClientModule,
-    ReactiveFormsModule
-
-    HttpClientModule,
+    ReactiveFormsModule,
     FormsModule,
     NgbModule
 
