@@ -1,12 +1,17 @@
+p, h2{
+  font-family: 'Fredoka', sans-serif;
+}
+
 .container_filter{
     display: flex;
     align-items: center;
-    background-color: rgb(22, 218, 113);
+    background-color: #e7e7e7;
     border-radius: 15px;
     height: 150px;
     margin-left: 20px;
     margin-right: 20px;
     justify-content: flex-start;
+
 }
 div{
     margin-left: 1%;
@@ -23,18 +28,33 @@ input{
 select{
     height: 37px;
     width: 120px;
-    
-    
+
+
 }
 .filters6{
     margin-left: 150px;
-
+    font-size: 'Fredoka', sans-serif;
 
 }
+
+.filters4 {
+
+  display: flex;
+  margin-top: 30px;
+  align-self: flex-start;
+}
+
 .filters_tit{
 
-    background-color: rgb(26, 200, 113);
-   text-align: center;
-    border-radius: 15px;
+  background-color: #e7e7e7;
+  text-align: center;
+  border-radius: 15px;
+
+}
+.filters_tit p{
+  font-size: 17px;
+  background-color: #e7e7e7;
+  text-align: center;
+  border-radius: 15px;
 
 }

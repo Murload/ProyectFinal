@@ -1,25 +1,31 @@
+
+p, h2, h1{
+  font-family: 'Fredoka', sans-serif;
+}
+
 .container_plan{
     display: flex;
     align-items: center;
     justify-items: center;
-    background-color: rgb(47, 177, 194);
+    /* background-color: rgb(47, 177, 194); */
     border-radius: 15px;
     height: 200px;
-    margin-left: 20px;
-    margin-right: 20px;
-    width: 1000px;
-    
+    margin-left: 0%;
+    /* margin-right: 20px; */
+    width: 100%;
+
 }
 div{
-    background-color: aqua;
+    /* background-color: aqua; */
+    border-radius: 10px;
     width: 400px;
     margin-left: 50px;
 
 }
 div img{
-    background-color: aqua;
+    /* background-color: aqua; */
     width: 400px;
-    
+
 
 }
 .write_plan{
@@ -30,12 +36,12 @@ div img{
 
 }
 a {
-    
-text-decoration: none;
+  color: #0093b4;
+  text-decoration: none;
 
 }
 a:hover{
-color: rgb(25, 163, 163);
+color: #00b960;
 
 
 }
