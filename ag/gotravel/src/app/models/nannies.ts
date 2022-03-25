@@ -26,5 +26,5 @@ export class Nannie{
         this.criminalRecord = criminalRecord;
         this.available = available;
         this.phone = phone;
+        }
     }
-}

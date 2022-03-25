@@ -5,7 +5,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Country } from 'src/app/models/search-nannies';
 import { SearchNanniesService } from 'src/app/services/search-nannies.service'; 
 
-
 @Component({
   selector: 'app-nannies',
   templateUrl: './nannies.component.html',
@@ -55,12 +54,3 @@ constructor(private _nanniesServices: NanniesService, private fb: FormBuilder , 
     }
   }
 
-
-
-
-  
-
-  
-
-
-//    
