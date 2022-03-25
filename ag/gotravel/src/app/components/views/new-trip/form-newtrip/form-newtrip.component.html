@@ -36,16 +36,16 @@
 
       <div class="destiny">
         <label for="start_day">Día de Inicio</label>
-        <input type="date" formControlName="date" name="start_day" id="startday">
-        <div class="alert alert-info" *ngIf="newTripForm.get('date')?.hasError('required')
-          && newTripForm.get('date')?.touched">
+        <input type="date" formControlName="startDate" name="start_day" id="startday">
+        <div class="alert alert-info" *ngIf="newTripForm.get('startDate')?.hasError('required')
+          && newTripForm.get('startDate')?.touched">
           Debes llenar este campo!
         </div>
 
         <label for="end_day">Día de finalización</label>
-        <input type="date" formControlName="date" name="end_day" id="enday">
-        <div class="alert alert-info" *ngIf="newTripForm.get('date')?.hasError('required')
-      && newTripForm.get('date')?.touched">
+        <input type="date" formControlName="endDate" name="end_day" id="enday">
+        <div class="alert alert-info" *ngIf="newTripForm.get('endDate')?.hasError('required')
+      && newTripForm.get('endDate')?.touched">
           Debes llenar este campo!
         </div>
       </div>
@@ -107,13 +107,10 @@
         <textarea formControlName="wishlist"  name="yestext" cols="30" rows="10" *ngIf=" yes == 1 " ></textarea>
 
       </fieldset>
-      <fieldset class="field">
+      <!-- <fieldset class="field">
 
         <legend>Niñeras</legend>
         <div class="destiny">
-          <!-- <input type="text" formControlName="nannies" placeholder="Nombre Niñera"> -->
-          <!--  -->
-          <!-- <div *ngIf='textoDeInput'> -->
 
             <select name="nanas" *ngIf="textoDeInput" >
               <option formControlName="nannies" value=""  *ngFor="let i of listNanas" >
@@ -122,14 +119,13 @@
 
               </option>
             </select>
-          <!-- </div> -->
         </div>
 
 
-      </fieldset>
+      </fieldset> -->
 
     <div class="bottom_sub">
-      <button type="submit" (click)="createOK()" >Añadir</button>
+      <button type="submit"  >Añadir</button>
     </div>
 
   </form>

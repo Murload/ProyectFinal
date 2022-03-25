@@ -49,11 +49,12 @@ export class FormNewtripComponent implements OnInit {
       name: ['', Validators.required],
       origin: ['', Validators.required],
       destiny: ['', Validators.required],
-      date: ['', Validators.required],
+      startDate: ['', Validators.required],
+      endDate: ['', Validators.required],
       passengers: ['1', [Validators.required, Validators.pattern(this.numbers)]],
       budget: ['', [Validators.required, Validators.pattern(this.numbers)]],
       wishlist: [''],
-      nannies: ['']
+      // nannies: ['']
     });
 
 
@@ -63,9 +64,6 @@ export class FormNewtripComponent implements OnInit {
 
 
   ngOnInit(): void {
-
-
-
 
   }
 
@@ -80,19 +78,38 @@ export class FormNewtripComponent implements OnInit {
       name: this.newTripForm.get('name')?.value,
       origin: this.newTripForm.get('origin')?.value,
       destiny: this.newTripForm.get('destiny')?.value,
-      date: this.newTripForm.get('date')?.value,
+      startDate: this.newTripForm.get('startDate')?.value,
+      endDate: this.newTripForm.get('endDate')?.value,
       passengers: this.newTripForm.get('passengers')?.value,
       budget: this.newTripForm.get('budget')?.value,
       wishlist: this.newTripForm.get('wishlist')?.value,
-      nannies: this.newTripForm.get('nannies')?.value,
+      // nannies: this.newTripForm.get('nannies')?.value,
 
     }
 
 
     this.privateService.postNewTrip(data_private).subscribe( data => {
-
+      Swal.fire({
+        icon: 'success',
+        iconColor: '#00FEB8',
+        title: 'Viaje Creado Correctamente!',
+        text: 'Volverás a la página principal donde verás tu nuevo viaje.',
+        showCloseButton: true,
+        confirmButtonText:'Vale!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          this.router.navigateByUrl('/sesion');
+        }
+      })
     }, err => {
-      console.log(err);
+      Swal.fire({
+        icon:'error',
+        iconColor: '#00FEB8',
+        title: 'Error!',
+        text: 'No se pudo crear el viaje, intenta nuevamente',
+        showCloseButton: true,
+        confirmButtonText:'Vale!'
+      });
     } );
 
 
@@ -111,25 +128,7 @@ export class FormNewtripComponent implements OnInit {
   // }
 
 
-  createOK() {
 
-
-    Swal.fire({
-      icon: 'success',
-      iconColor: '#00FEB8',
-      title: 'Viaje Creado Correctamente!',
-      text: 'Volverás a la página principal donde verás tu nuevo viaje.',
-      showCloseButton: true,
-      confirmButtonText:'Vale!'
-    }).then((result) => {
-      if (result.isConfirmed) {
-        this.router.navigateByUrl('/sesion');
-      }
-    })
-
-
-
-  }
 
 
 }

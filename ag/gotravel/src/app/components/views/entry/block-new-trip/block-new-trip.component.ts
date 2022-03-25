@@ -15,6 +15,9 @@ import { Nannies } from '../../../../models/entry/Nannies';
 // forms import
 import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
 
+// sweet alerts
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-block-new-trip',
@@ -53,11 +56,12 @@ export class BlockNewTripComponent implements OnInit {
         name: ['', Validators.required],
         origin: ['', Validators.required],
         destiny: ['', Validators.required],
-        date: ['', Validators.required],
+        startDate: ['', Validators.required],
+        endDate: ['', Validators.required],
         passengers: ['1', [Validators.required, Validators.pattern(this.numbers)]],
         budget: ['', [Validators.required, Validators.pattern(this.numbers)]],
         wishlist: [''],
-        nannies: ['']
+        // nannies: ['']
       });
 
 
@@ -82,12 +86,6 @@ export class BlockNewTripComponent implements OnInit {
   openLG(contenido: any) {
     this.modal.open(contenido, {size:'lg'});
 
-    // this.PrivService.getPrivTrips().subscribe( data => {
-    //   console.log(data[0]);
-    //   this.putTripForm.patchValue(data[0]);
-    // });
-
-
   }
 
   // function 4 get and send data
@@ -101,7 +99,6 @@ export class BlockNewTripComponent implements OnInit {
 
   getData(newtrip: any) {
     this.putTripForm.patchValue(newtrip);
-    console.log('hola')
   }
 
   // methods
@@ -112,26 +109,50 @@ export class BlockNewTripComponent implements OnInit {
 
 
     const data_private: PrivTrip = {
-      _id: this.putTripForm.get('_id')?.value,
       name: this.putTripForm.get('name')?.value,
       origin: this.putTripForm.get('origin')?.value,
       destiny: this.putTripForm.get('destiny')?.value,
-      date: this.putTripForm.get('date')?.value,
+      startDate: this.putTripForm.get('startDate')?.value,
+      endDate: this.putTripForm.get('endDate')?.value,
       passengers: this.putTripForm.get('passengers')?.value,
       budget: this.putTripForm.get('budget')?.value,
       wishlist: this.putTripForm.get('wishlist')?.value,
-      nannies: this.putTripForm.get('nannies')?.value,
+      // nannies: this.putTripForm.get('nannies')?.value,
 
     }
-    localStorage.getItem("id_trip");
+    console.log(localStorage.getItem("id_trip"));
 
-    this.PrivService.putTrip(localStorage.getItem("id_trip"), data_private).subscribe( data =>{
-      console.log("si",data);
-    } , err => {
-      console.log(err);
-    } );
+    this.PrivService.putTrip(localStorage.getItem("id_trip"), data_private).subscribe( data => {
+      Swal.fire({
+        icon: 'success',
+        iconColor: '#00FEB8',
+        title: 'Se actualizó este viaje!',
+        text: 'Volverás a la página principal.',
+        showCloseButton: true,
+        confirmButtonText:'Vale!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          this.router.navigateByUrl('/sesion');
+        }
+      })
+    }, error => {
+      Swal.fire({
+        icon: 'error',
+        iconColor: '#00FEB8',
+        title: 'Error!',
+        text: 'No se pudo crear el viaje, intenta nuevamente',
+        showCloseButton: true,
+        confirmButtonText:'Vale!'
+      });
+    } )
 
 
+
+    // console.log( data_private );
   }
+
+
+
+
 
 }

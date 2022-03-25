@@ -1,6 +1,6 @@
 <ng-template #contenido let-modal>
   <div class="modal-header">
-    <h4 class="modal-title">Titulo del Modal</h4>
+    <h4 class="modal-title">Actualizar Viaje</h4>
     <button class="close" aria-label="close" type="button" (click)="modal.dismiss()" >
       <span aria-hidden="true" >&times;</span>
     </button>
@@ -46,16 +46,16 @@
 
           <div class="destiny">
             <label for="start_day">Día de Inicio</label>
-            <input type="date" formControlName="date" name="start_day" id="startday">
-            <div class="alert alert-info" *ngIf="putTripForm.get('date')?.hasError('required')
-              && putTripForm.get('date')?.touched">
+            <input type="date" formControlName="startDate" name="start_day" id="startday">
+            <div class="alert alert-info" *ngIf="putTripForm.get('startDate')?.hasError('required')
+              && putTripForm.get('startDate')?.touched">
               Debes llenar este campo!
             </div>
 
             <label for="end_day">Día de finalización</label>
-            <input type="date" formControlName="date" name="end_day" id="enday">
-            <div class="alert alert-info" *ngIf="putTripForm.get('date')?.hasError('required')
-          && putTripForm.get('date')?.touched">
+            <input type="date" formControlName="endDate" name="end_day" id="enday">
+            <div class="alert alert-info" *ngIf="putTripForm.get('endDate')?.hasError('required')
+          && putTripForm.get('endDate')?.touched">
               Debes llenar este campo!
             </div>
           </div>
@@ -137,23 +137,15 @@
           </fieldset> -->
 
         <div class="bottom_sub">
-          <button type="submit" >Añadir</button>
+          <button type="submit" (click)="modal.close()" >Actualizar</button>
         </div>
 
       </form>
 
-
-
-
-
-
-
-
-
   </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-success"  (click)="modal.close()">Ok!</button>
-  </div>
+  <!-- <div class="modal-footer">
+    <button type="button" class="btn btn-success"  (click)="modal.close()">Terminé!</button>
+  </div> -->
 
 </ng-template>
 
