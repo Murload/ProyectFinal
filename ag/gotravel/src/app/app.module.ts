@@ -73,7 +73,7 @@ import { ContainerTravelComponent } from './components/views/tourist-plan/contai
     FormNewtripComponent,
 
     OtherTripsComponent,
-    ModalComponent
+    ModalComponent,
 
     ContainerTravelComponent,
 
