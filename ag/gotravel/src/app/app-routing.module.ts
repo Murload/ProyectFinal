@@ -10,8 +10,11 @@ import { NewTripComponent } from './components/views/new-trip/new-trip.component
 import { PublicTripComponent } from './components/views/public-trip/public-trip.component';
 import { RegisterComponent } from './components/views/register/register.component';
 import { TouristPlanComponent } from './components/views/tourist-plan/tourist-plan.component';
-// import { AboutUsComponent } from './components/views/home/about-us/about-us.component';
-// import { FooterComponent } from './footer/footer.component';
+
+import { AboutUsComponent } from './components/views/home/about-us/about-us.component';
+import { FooterComponent } from './components/footer/footer.component';
+
+
 import { EntryComponent } from './components/views/entry/entry.component';
 import { OtherTripsComponent } from './components/views/other-trips/other-trips.component';
 import { ModalComponent } from './components/modal/modal.component';
