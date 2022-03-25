@@ -24,9 +24,18 @@ div img{
 }
 .write_plan{
     background-color: aliceblue;
-    border: 0.1px solid black;
     border-radius:15px;
     padding: 10px;
     text-decoration: none;
+
+}
+a {
+    
+text-decoration: none;
+
+}
+a:hover{
+color: rgb(25, 163, 163);
+
 
 }

@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatSliderModule } from '@angular/material/slider'
 
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -64,7 +67,6 @@ import { ContainerTravelComponent } from './components/views/tourist-plan/contai
     TitledescComponent,
     FormNewtripComponent,
     ContainerTravelComponent,
-
     FormNewtripComponent,
 
 
@@ -78,7 +80,10 @@ import { ContainerTravelComponent } from './components/views/tourist-plan/contai
     MatFormFieldModule,
     MatNativeDateModule ,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
