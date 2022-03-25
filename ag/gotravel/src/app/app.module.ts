@@ -2,8 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatSliderModule } from '@angular/material/slider';
 
+
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
 
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -92,10 +94,12 @@ import { SearchNanniesComponent } from './components/views/nannies/search-nannie
     MatNativeDateModule ,
     MatInputModule,
     MatIconModule,
+    ReactiveFormsModule,
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
     NgbModule
+
 
   ],
   providers: [],
