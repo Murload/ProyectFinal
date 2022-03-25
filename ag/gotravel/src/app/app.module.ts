@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatSliderModule } from '@angular/material/slider'
 
+import { HttpClientModule } from '@angular/common/http';
+
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,13 +20,12 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { Section1Component } from './components/views/home/section1/section1.component';
 import { AboutUsComponent } from './components/views/home/about-us/about-us.component';
 import { OurServicesComponent } from './components/views/home/our-services/our-services.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { EntryComponent } from './components/views/entry/entry.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { BlockNewTripComponent } from './components/views/entry/block-new-trip/block-new-trip.component';
 import { ViajesComponent } from './components/viajes/viajes.component';
-import { BlockVisitComponent } from './components/views/entry/block-visit/block-visit.component'
-import { ScheduleComponent } from './components/views/nannies/schedule/schedule.component';
+import { BlockVisitComponent } from './components/views/entry/block-visit/block-visit.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -34,6 +36,7 @@ import { FiltersPlanComponent } from './components/views/tourist-plan/filters-pl
 import { TitledescComponent } from './components/views/new-trip/titledesc/titledesc.component';
 import { FormNewtripComponent } from './components/views/new-trip/form-newtrip/form-newtrip.component';
 import { ContainerTravelComponent } from './components/views/tourist-plan/container-travel/container-travel.component';
+import { SearchNanniesComponent } from './components/views/nannies/search-nannies/search-nannies.component';
 
 
 
@@ -59,15 +62,12 @@ import { ContainerTravelComponent } from './components/views/tourist-plan/contai
     BlockNewTripComponent,
     BlockVisitComponent,
     ViajesComponent,
-    ScheduleComponent,
     FiltersPlanComponent,
     TitledescComponent,
     FormNewtripComponent,
     ContainerTravelComponent,
-
     FormNewtripComponent,
-
-
+    SearchNanniesComponent
   ],
   imports: [
     BrowserModule,
@@ -78,7 +78,9 @@ import { ContainerTravelComponent } from './components/views/tourist-plan/contai
     MatFormFieldModule,
     MatNativeDateModule ,
     MatInputModule,
-    MatIconModule
+    MatIconModule, 
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,39 +1,43 @@
-  <app-sidebar></app-sidebar>
-<section class="babysitter">
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
-      <div class="card">
-        <img src="../../../../assets/img/nannies/niñera(1).jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Disponible</h5>
-          <p class="card-text">Natalia Madero.</p>
-          <button type="button" class="btn btn-success">Seleccionar</button>
+    <app-sidebar></app-sidebar>
+    <!-- <app-search-nannies></app-search-nannies> -->
+
+    <div class="col 10 input" >
+      <form [formGroup]="nanniesList" (ngSubmit)="showNanniesByCountry()">
+          <div class="mb-3">
+          <input type="text" formControlName="country" class="form-control-lg" placeholder="Introduce el país">
+          </div>
+          <button class="btn btn-success btn-sm" type="submit">Buscar</button>
+      </form>
+    </div>
+  
+    <!-- por pais -->
+    <div class="container"  >
+      <div class="row">
+          <div class="card" *[ngIf]="nannyCountry.length > 0">
+          </div>
         </div>
-      </div>
+          <div class="card"*ngFor="let _dataCountry of nannyCountry">
+            <img src="../../../../assets/img/about-us-img.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">{{_dataCountry.name}} {{_dataCountry.lastName}}</p>
+              <p class="card-text"> ${{_dataCountry.price}}</p>
+              <p class="card-text">Edad: {{_dataCountry.age}}</p>
+            </div>
+          </div>
     </div>
 
-    <div class="col">
-      <div class="card">
-        <img src="../../../../assets/img/nannies/niñera(1).jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Disponible</h5>
-          <p class="card-text"> Martina Ferrer.</p>
-          <button type="button" class="btn btn-success">Seleccionar</button>
-        </div>
-      </div>
-    </div>
 
-    <div class="col">
-      <div class="card">
-        <img src="../../../../assets/img/nannies/niñera(1).jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Disponible</h5>
-          <p class="card-text">Carolina Padrón</p>
-          <button type="button" class="btn btn-success">Seleccionar</button>
+    <div class="container" *ngIf="nannyCountry.length > 0">
+      <div class="row">
+          <div class="card" *[ngIf]="nannyList.length > 0">
+          </div>
         </div>
-      </div>
+          <div class="card"*ngFor="let _datanannie of nannyList">
+            <img src="../../../../assets/img/about-us-img.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">{{_datanannie.name}} {{_datanannie.lastName}}</p>
+              <p class="card-text"> ${{_datanannie.price}}</p>
+              <p class="card-text">Edad: {{_datanannie.age}}</p>
+            </div>
+          </div>
     </div>
-  </div>
-</section>
-<app-schedule></app-schedule>
-

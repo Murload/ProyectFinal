@@ -12,7 +12,7 @@ import { PublicTripComponent } from './components/views/public-trip/public-trip.
 import { RegisterComponent } from './components/views/register/register.component';
 import { TouristPlanComponent } from './components/views/tourist-plan/tourist-plan.component';
 import { AboutUsComponent } from './components/views/home/about-us/about-us.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { EntryComponent } from './components/views/entry/entry.component';
 import { ViajesComponent } from './components/viajes/viajes.component';
 
