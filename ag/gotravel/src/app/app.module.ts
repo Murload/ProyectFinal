@@ -2,8 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatSliderModule } from '@angular/material/slider';
 
+
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
 
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -80,7 +82,6 @@ import { SearchNanniesComponent } from './components/views/nannies/search-nannie
     FiltersPlanComponent,
     TitledescComponent,
     FormNewtripComponent,
-
     OtherTripsComponent,
     ModalComponent,
 
@@ -101,14 +102,12 @@ import { SearchNanniesComponent } from './components/views/nannies/search-nannie
     MatFormFieldModule,
     MatNativeDateModule ,
     MatInputModule,
-
     MatIconModule, 
-    HttpClientModule,
-    ReactiveFormsModule
-
+    ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
     NgbModule
+
 
   ],
   providers: [],
