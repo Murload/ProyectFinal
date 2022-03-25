@@ -1,16 +1,19 @@
- .main_content {
-  /*display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: 0.5%;
+
+/* @media screen () {
+
+} */
+
+.blocks {
   position: absolute;
-  min-height: 8%;
-  max-height: 100%;
-  overflow: visible;
-  left:280px; */
-
-  min-height: 150vh;
-  max-height: 250vh;
-
+  display: flex;
+  flex-direction: column;
+  row-gap: 5%;
+  /* height: 200vh; */
+  min-width: 15vw;
+  max-width: 70vw;
+  width: 100%;
+  left: 290px;
 }
+
+
 

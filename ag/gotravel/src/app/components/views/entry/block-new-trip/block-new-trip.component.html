@@ -1,48 +1,221 @@
+<ng-template #contenido let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Actualizar Viaje</h4>
+    <button class="close" aria-label="close" type="button" (click)="modal.dismiss()" >
+      <span aria-hidden="true" >&times;</span>
+    </button>
+  </div>
 
-<section class="new_trip">
+  <div class="modal-body">
 
-  <!-- <div> -->
-    <div class="title_trips">
-      <h2> Tus últimos Viajes </h2>
-    </div>
+      <form class="form_here" [formGroup]="putTripForm"  (ngSubmit)="editTrip() " >
 
-    <div class="trips_divs">
+
+        <fieldset class="nam_newtrip">
+          <legend> Nombre del Viaje </legend>
+          <input type="text"  formControlName="name" placeholder="Nombre Nuevo Viaje...">
+          <div class="alert alert-info" *ngIf="putTripForm.get('name')?.hasError('required')
+          && putTripForm.get('name')?.touched">
+          Debes llenar este campo!
+        </div>
+      </fieldset>
+
+      <fieldset class="field">
+        <legend> Lugar de Destino</legend>
+        <div class="destiny">
+            <label for="origin">Lugar de Origen</label>
+            <input type="text" formControlName="origin" placeholder="De dónde vienes...">
+            <div class="alert alert-info" *ngIf="putTripForm.get('origin')?.hasError('required')
+            && putTripForm.get('origin')?.touched">
+            Debes llenar este campo!
+          </div>
+            <label for="destiny">Lugar de destino</label>
+            <input (blur) = 'onBlur()' [(ngModel)]='textoDeInput' type="text" formControlName="destiny" placeholder="A dónde vas...">
+
+            <div   class="alert alert-info" *ngIf="putTripForm.get('destiny')?.hasError('required')
+              && putTripForm.get('destiny')?.touched">
+              Debes llenar este campo!
+            </div>
+
+          </div>
+
+        </fieldset>
+
+        <fieldset class="field">
+          <legend>Fecha</legend>
+
+          <div class="destiny">
+            <label for="start_day">Día de Inicio</label>
+            <input type="date" formControlName="startDate" name="start_day" id="startday">
+            <div class="alert alert-info" *ngIf="putTripForm.get('startDate')?.hasError('required')
+              && putTripForm.get('startDate')?.touched">
+              Debes llenar este campo!
+            </div>
+
+            <label for="end_day">Día de finalización</label>
+            <input type="date" formControlName="endDate" name="end_day" id="enday">
+            <div class="alert alert-info" *ngIf="putTripForm.get('endDate')?.hasError('required')
+          && putTripForm.get('endDate')?.touched">
+              Debes llenar este campo!
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="field">
+          <legend>Pasajeros</legend>
+
+          <div class="destiny">
+            <!-- <input type="text" formControlName="passengers" placeholder="Cuántas personas van..."> -->
+            <select formControlName="passengers">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6+</option>
+            </select>
+            <div class="alert alert-info" *ngIf="putTripForm.get('passengers')?.hasError('required')
+          && putTripForm.get('passengers')?.touched">
+              Debes llenar este campo!
+            </div>
+          </div>
+
+        </fieldset>
+
+        <fieldset class="field">
+          <legend>Presupuesto</legend>
+          <div class="destiny">
+            <input type="text" formControlName="budget" placeholder="Tu presupuesto...">
+            <div class="alert alert-info" *ngIf="putTripForm.get('budget')?.hasError('required')
+          && putTripForm.get('budget')?.touched">
+              Debes llenar este campo!
+            </div>
+            <div class="alert alert-danger" *ngIf="putTripForm.get('budget')?.hasError('pattern')">
+              Debe ser un número!
+            </div>
+          </div>
+        </fieldset>
+
+
+        <fieldset class="wish_list">
+
+          <p>¿Quieres añadir una lista de deseos?<br>
+            Puedes añadirla cuando lo desees!</p>
+
+
+
+            <div class="option">
+              <input [(ngModel)]="yes" [value]="1" [ngModelOptions]="{standalone: true}" type="radio" name="yes"  >
+              <label for="answ">Si</label>
+            </div>
+
+            <div class="option" style= 'margin-left:8px' >
+              <input [(ngModel)]="yes" [value]="0" [ngModelOptions]="{standalone: true}" type="radio" name="yes" >
+              <label for="answ1">No</label>
+            </div>
+
+            <textarea formControlName="wishlist"  name="yestext" cols="30" rows="10" *ngIf=" yes == 1 " ></textarea>
+
+          </fieldset>
+          <!-- <fieldset class="field">
+
+            <legend>Niñeras</legend>
+            <div class="destiny">
+
+
+                <select name="nanas" *ngIf="textoDeInput" >
+                  <option formControlName="nannies" value=""  *ngFor="let i of listNanas" >
+
+                      {{  i.name }}
+
+                  </option>
+                </select>
+
+            </div>
+
+
+          </fieldset> -->
+
+        <div class="bottom_sub">
+          <button type="submit" (click)="modal.close()" >Actualizar</button>
+        </div>
+
+      </form>
+
+  </div>
+  <!-- <div class="modal-footer">
+    <button type="button" class="btn btn-success"  (click)="modal.close()">Terminé!</button>
+  </div> -->
+
+</ng-template>
+
+
+
+
+<section class="new_trip" >
+
+  <div class="title_trips">
+    <h2> Tus últimos Viajes </h2>
+  </div>
+
+  <div class="content_trips" >
+
+    <!-- <div class="trips_divs"> -->
       <div class="add_trip">
-        <img src="assets/img/addicon.png" alt="icon">
-        <h4> Crear nuevo Viaje</h4>
-      </div>
+        <div class="content_add">
+          <a [routerLink]="['/newtrip']" >
 
-      <div class="default_div">
-        <img src="assets/img/gallery/imgdefa.png" alt="default">
-        <!-- <div class="descrip_div"></div> -->
-        <p>
-          Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit.
-        </p>
+            <img src="assets/img/addicon.png" alt="icon">
+          </a>
+          <h4> Crear nuevo Viaje</h4>
+        </div>
       </div>
-      <div class="default_div">
-        <img src="assets/img/gallery/paris.jpg" alt="default">
-        <!-- <div class="descrip_div"></div> -->
-        <p>
-          Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit.
-        </p>
-      </div>
-      <div class="default_div">
-        <img src="assets/img/gallery/beach.jpg" alt="default">
-        <!-- <div class="descrip_div"></div> -->
-        <p>
-          Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit.
-        </p>
-      </div>
-
     <!-- </div> -->
 
 
-  </div>
+    <div class="divs_info_trips" >
+
+        <div class="if_notrip" *ngIf="listPrivTrips.length == 0" >
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit.
+          </p>
+        </div>
+
+      <div style="cursor: pointer"
+      class="default_div"
+      *ngFor="let newtrip of listPrivTrips"
+      (click)="openLG(contenido)"
+      (click)="getData(newtrip)"
+      (click)="getID(newtrip._id)"
+      >
+
+        <img  src="assets/img/gallery/beach.jpg" alt="default">
+
+        <p>
+
+          {{ newtrip.name }}
+        <br>
+          {{ newtrip.origin }}
+        <br>
+          {{ newtrip.destiny }}
+        </p>
+
+      </div>
+
+
+
+    </div>
+</div>
+    <!-- </div> -->
+
+
+
 
 
 
 
 </section>
+
+
