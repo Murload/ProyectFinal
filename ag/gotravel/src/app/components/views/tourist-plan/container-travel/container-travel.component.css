@@ -1,0 +1,32 @@
+.container_plan{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    background-color: rgb(47, 177, 194);
+    border-radius: 15px;
+    height: 200px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 1000px;
+    
+}
+div{
+    background-color: aqua;
+    width: 400px;
+    margin-left: 50px;
+
+}
+div img{
+    background-color: aqua;
+    width: 400px;
+    
+
+}
+.write_plan{
+    background-color: aliceblue;
+    border: 0.1px solid black;
+    border-radius:15px;
+    padding: 10px;
+    text-decoration: none;
+
+}

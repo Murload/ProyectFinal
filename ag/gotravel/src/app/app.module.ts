@@ -37,9 +37,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { FiltersPlanComponent } from './components/views/tourist-plan/filters-plan/filters-plan.component';
 import { TitledescComponent } from './components/views/new-trip/titledesc/titledesc.component';
 import { FormNewtripComponent } from './components/views/new-trip/form-newtrip/form-newtrip.component';
+
 import { OtherTripsComponent } from './components/views/other-trips/other-trips.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ContainerTravelComponent } from './components/views/tourist-plan/container-travel/container-travel.component';
+
 
 
 
@@ -68,8 +71,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FiltersPlanComponent,
     TitledescComponent,
     FormNewtripComponent,
+
     OtherTripsComponent,
     ModalComponent
+
+    ContainerTravelComponent,
+
+    FormNewtripComponent,
+
+
 
   ],
   imports: [
