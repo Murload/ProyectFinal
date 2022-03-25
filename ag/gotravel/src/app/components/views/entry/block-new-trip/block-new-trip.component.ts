@@ -33,10 +33,11 @@ export class BlockNewTripComponent implements OnInit {
   listNanas: Nannies[] = [];
 
   // form
-  newTripForm : FormGroup;
+  putTripForm : FormGroup;
   yes = 0;
   numbers = /^([0-9])*$/;
   textoDeInput = '';
+
 
 
   // datos path
@@ -45,10 +46,10 @@ export class BlockNewTripComponent implements OnInit {
 
 
   constructor( private PrivService : UsersPrivTripsService,  private modal: NgbModal,
-    private fb: FormBuilder, private privateService: UsersPrivTripsService,
+    private fb: FormBuilder,
     private router: Router ) {
 
-      this.newTripForm = this.fb.group({
+      this.putTripForm = this.fb.group({
         name: ['', Validators.required],
         origin: ['', Validators.required],
         destiny: ['', Validators.required],
@@ -74,47 +75,63 @@ export class BlockNewTripComponent implements OnInit {
     }, error => {
       console.log(error);
     } );
+
   }
 
   // open modal
   openLG(contenido: any) {
     this.modal.open(contenido, {size:'lg'});
+
+    // this.PrivService.getPrivTrips().subscribe( data => {
+    //   console.log(data[0]);
+    //   this.putTripForm.patchValue(data[0]);
+    // });
+
+
   }
 
   // function 4 get and send data
-  func(newtrip: any) {
-    console.log('lista de datos');
-    console.log(newtrip.name);
+  getID(newtrip: any) {
 
-    this.newTripForm.patchValue(newtrip);
+    console.log(localStorage.getItem("id_trip"));
+
+    return localStorage.setItem("id_trip",newtrip);
 
   }
 
+  getData(newtrip: any) {
+    this.putTripForm.patchValue(newtrip);
+    console.log('hola')
+  }
+
   // methods
+
+
   editTrip() {
+
+
+
     const data_private: PrivTrip = {
-      name: this.newTripForm.get('name')?.value,
-      origin: this.newTripForm.get('origin')?.value,
-      destiny: this.newTripForm.get('destiny')?.value,
-      date: this.newTripForm.get('date')?.value,
-      passengers: this.newTripForm.get('passengers')?.value,
-      budget: this.newTripForm.get('budget')?.value,
-      wishlist: this.newTripForm.get('wishlist')?.value,
-      nannies: this.newTripForm.get('nannies')?.value,
+      _id: this.putTripForm.get('_id')?.value,
+      name: this.putTripForm.get('name')?.value,
+      origin: this.putTripForm.get('origin')?.value,
+      destiny: this.putTripForm.get('destiny')?.value,
+      date: this.putTripForm.get('date')?.value,
+      passengers: this.putTripForm.get('passengers')?.value,
+      budget: this.putTripForm.get('budget')?.value,
+      wishlist: this.putTripForm.get('wishlist')?.value,
+      nannies: this.putTripForm.get('nannies')?.value,
 
     }
+    localStorage.getItem("id_trip");
 
-    console.log(data_private);
-
-    this.privateService.putTrip(data_private).subscribe( data => {
-
-    }, err => {
+    this.PrivService.putTrip(localStorage.getItem("id_trip"), data_private).subscribe( data =>{
+      console.log("si",data);
+    } , err => {
       console.log(err);
     } );
 
 
   }
-
-
 
 }

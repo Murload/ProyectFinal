@@ -21,8 +21,8 @@ export class UsersPrivTripsService {
     return this.http.post(this.url_api, newTrip);
   }
 
-  putTrip( trip: PrivTrip ): Observable<any> {
-    return this.http.put(this.url_api, trip)
+  putTrip( id: string | null, trip: PrivTrip ): Observable<any> {
+    return this.http.put(`${this.url_api}/${id}`, trip)
   }
 
 

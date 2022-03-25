@@ -70,8 +70,9 @@ export class FormNewtripComponent implements OnInit {
   }
 
   // methods
+
+
   addNewTrip() {
-    console.log(this.newTripForm);
 
 
 
@@ -87,11 +88,12 @@ export class FormNewtripComponent implements OnInit {
 
     }
 
-    console.log(data_private);
+
     this.privateService.postNewTrip(data_private).subscribe( data => {
 
-    }, err => {} );
-
+    }, err => {
+      console.log(err);
+    } );
 
 
 
