@@ -9,22 +9,20 @@ p, h2{
   flex-direction: column;
   justify-content: center;
   /* size */
-  width: 73%;
-  height: 55%;
-  position: absolute;
-  left: 280px;
+  min-height: 75%;
+  max-height: 100%;
+  width: 100%;
   margin: 2.5vw;
   /* color */
   border-radius: 15px;
   background-color: #e7e7e7;
-
-
 }
+
 
 .title_trips {
   display: flex;
   justify-content: center;
-
+  margin: 1%;
 }
 
 
@@ -36,32 +34,59 @@ p, h2{
 
 .trips_divs {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   gap: 20px;
-  /* border: 5px rgb(38, 123, 233) solid; */
   min-height: 50%;
   max-height: 75%;
   margin: 15px;
 }
 
 /* add new trip */
+
+/* main trips */
+.content_trips {
+  display:flex;
+  justify-content: center;
+  column-gap: 5%;
+  margin: 3%;
+}
+
+
+
 .add_trip {
   display: flex;
   flex-direction: column;
-  align-self: center;
-  /* border: 6px purple solid; */
-  height: 60%;
+  justify-content: center;
   min-width: 20%;
-  max-width: 35%;
+  max-width: 60%;
+  /* min-height: 55%;
+  max-height: 90%; */
+}
+
+.content_add {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
+  min-height: 50%;
+  max-height: 90%;
   background-color: rgb(255, 255, 255);
+  box-shadow: 6px 6px 3px rgb(153, 152, 152);
 }
 
-.add_trip img {
-  max-width: 35%;
-  max-height: 60%;
+
+.content_add:hover {
+  box-shadow: 3.5px 3.5px 3px rgb(153, 152, 152);
+  /* max-width: 25%;
+  max-height: 1000%; */
+  /* width: 105%;
+  height: 105%; */
+}
+
+.add_trip a img{
+  max-width: 125%;
+  max-height: 150%;
 
 }
 .add_trip h4 {
@@ -75,34 +100,226 @@ p, h2{
   overflow: hidden;
 }
 
+/* text if doesn't exist trips */
+
+
+.if_notrip {
+
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.if_notrip p{
+  padding: 10%;
+  font-size: 15px;
+  color: black;
+}
+/* ------NO TRIPS------ */
+
 /* older trips */
+
+.divs_info_trips {
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 8%;
+  row-gap: 3%;
+}
+
+
 .default_div {
   display: flex;
   flex-direction: column;
   row-gap: 5%;
-  min-width: 20%;
-  max-width: 35%;
-  min-height: 40%;
-  max-height: 100%;
+  max-width: 25%;
+  max-height: 95%;
   background-color: white;
 
 }
 
-.default_div img {
+
+
+.default_div  img {
   /* background-size: cover; */
   min-width: 60%;
   max-width: 100%;
   min-height: 10%;
   max-height: 55%;
 }
-.default_div p {
+.default_div  p {
   min-width: 60%;
   max-width: 100%;
   min-height: 20%;
-  max-height: 42%;
-  font-size: 1.4vw;
+  max-height: 35%;
+  font-size: 1.1vw;
+  padding: 2%;
   overflow: auto;
   text-align: center;
-  margin: 0;
   color: black;
 }
+
+/* modal */
+.close {
+  background-color: #fff;
+  width: 5%;
+  height: 6%;
+  color: rgb(3, 3, 3);
+  border: none;
+}
+
+.close:hover {
+  color: rgb(90, 90, 90);
+  border-left: 2px rgba(148, 147, 147, 0.849) solid;
+  border-bottom: 2px rgba(148, 147, 147, 0.849) solid;
+}
+
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap'); */
+p, h2, label, input, legend{
+  font-family: 'Fredoka', sans-serif;
+}
+
+legend, p {
+  color: black;
+  font-size: 1.2em;
+}
+
+.form_newtrip {
+  position: absolute;
+  padding: 2%;
+  left: 27.4%;
+  top: 42%;
+  min-width: 65vw;
+  max-width: 100vw;
+  min-height: 200vh;
+  max-height: 300vh;
+  overflow: visible;
+}
+
+
+
+
+.form_here {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10%;
+  align-items: center;
+  padding: 3%;
+  min-width: 50vw;
+  max-width: 60vw;
+  min-height: 90vh;
+  max-height: 285vh;
+  left: 30%;
+  top: 42%;
+  box-shadow: 0px 0px 40px 3px #adadad;
+  background-color: #fff;
+  border-radius: 12px;
+
+}
+
+
+.nam_newtrip {
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  background-color: #E7E7E7;
+  border-radius: 10px;
+  width: 50%;
+}
+
+.field {
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5%;
+  width: 70%;
+  height: 40%;
+  background-color: #E7E7E7;
+  border-radius: 10px;
+}
+
+.destiny {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+.calender {
+  display: flex;
+  width: 90%;
+  height: 180px;
+}
+
+.wish_list{
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5%;
+  width: 70%;
+  height: 40%;
+  background-color: #E7E7E7;
+  border-radius: 10px;
+}
+
+.option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  width: 200px;
+}
+
+
+.bottom_sub {
+  /* border: 2px green solid; */
+  margin: 2%;
+  width: 30%;
+
+}
+
+.field input, .nam_newtrip input, select {
+  height: 45px;
+  width: 95%;
+  margin: 3%;
+
+}
+
+legend {
+  width: 10em;
+  height: 1.5em;
+  text-align: center;
+
+}
+
+
+
+.bottom_sub button {
+  background: linear-gradient(45deg, #1de099, #1dc8cd);
+  border: 0;
+  border-radius: 20px;
+  width: 100%;
+  padding: 8px 30px;
+  color: #fff;
+}
+
+
+.calender {
+  display: flex;
+  flex-direction: column;
+  min-width: 25%;
+  max-width: 50%;
+  min-height: 440%;
+  max-height: 650%;
+}
+
+
+
+/* end modal */

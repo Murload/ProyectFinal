@@ -1,71 +1,134 @@
 <section class="form_newtrip">
-  <form action="" class="form_here">
+  <form class="form_here" [formGroup]="newTripForm" (ngSubmit)="addNewTrip()" >
 
     <fieldset class="nam_newtrip">
       <legend> Nombre del Viaje </legend>
-      <input type="text" placeholder="Nombre Nuevo Viaje...">
-    </fieldset>
+      <input type="text" formControlName="name" placeholder="Nombre Nuevo Viaje...">
+      <div class="alert alert-info" *ngIf="newTripForm.get('name')?.hasError('required')
+      && newTripForm.get('name')?.touched">
+      Debes llenar este campo!
+    </div>
+  </fieldset>
 
-    <fieldset >
-      <legend> Lugar de Destino</legend>
-      <div class="destiny">
-        <input type="text" placeholder="De dónde vienes...">
-        <input type="text" placeholder="A dónde vas...">
+  <fieldset class="field">
+    <legend> Lugar de Destino</legend>
+    <div class="destiny">
+        <label for="origin">Lugar de Origen</label>
+        <input type="text" formControlName="origin" placeholder="De dónde vienes...">
+        <div class="alert alert-info" *ngIf="newTripForm.get('origin')?.hasError('required')
+        && newTripForm.get('origin')?.touched">
+        Debes llenar este campo!
       </div>
+        <label for="destiny">Lugar de destino</label>
+        <input (blur) = 'onBlur()' [(ngModel)]='textoDeInput' type="text" formControlName="destiny" placeholder="A dónde vas...">
+
+        <div   class="alert alert-info" *ngIf="newTripForm.get('destiny')?.hasError('required')
+          && newTripForm.get('destiny')?.touched">
+          Debes llenar este campo!
+        </div>
+
+      </div>
+
     </fieldset>
 
-    <fieldset >
+    <fieldset class="field">
       <legend>Fecha</legend>
 
-      <div class="calender">
+      <div class="destiny">
+        <label for="start_day">Día de Inicio</label>
+        <input type="date" formControlName="startDate" name="start_day" id="startday">
+        <div class="alert alert-info" *ngIf="newTripForm.get('startDate')?.hasError('required')
+          && newTripForm.get('startDate')?.touched">
+          Debes llenar este campo!
+        </div>
 
-        calender...
-
-
-
+        <label for="end_day">Día de finalización</label>
+        <input type="date" formControlName="endDate" name="end_day" id="enday">
+        <div class="alert alert-info" *ngIf="newTripForm.get('endDate')?.hasError('required')
+      && newTripForm.get('endDate')?.touched">
+          Debes llenar este campo!
+        </div>
       </div>
     </fieldset>
 
-    <fieldset >
+    <fieldset class="field">
       <legend>Pasajeros</legend>
 
-      <div>
-        <input type="text" placeholder="Cuántas personas van...">
+      <div class="destiny">
+        <!-- <input type="text" formControlName="passengers" placeholder="Cuántas personas van..."> -->
+        <select formControlName="passengers">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6+</option>
+        </select>
+        <div class="alert alert-info" *ngIf="newTripForm.get('passengers')?.hasError('required')
+      && newTripForm.get('passengers')?.touched">
+          Debes llenar este campo!
+        </div>
       </div>
 
     </fieldset>
 
-    <fieldset >
+    <fieldset class="field">
       <legend>Presupuesto</legend>
-      <div>
-        <input type="text" placeholder="Tu presupuesto...">
+      <div class="destiny">
+        <input type="text" formControlName="budget" placeholder="Tu presupuesto...">
+        <div class="alert alert-info" *ngIf="newTripForm.get('budget')?.hasError('required')
+      && newTripForm.get('budget')?.touched">
+          Debes llenar este campo!
+        </div>
+        <div class="alert alert-danger" *ngIf="newTripForm.get('budget')?.hasError('pattern')">
+          Debe ser un número!
+        </div>
       </div>
     </fieldset>
 
-    <fieldset >
 
-      <p>¿Quieres añadir una lista de deseos? <br>
+    <fieldset class="wish_list">
+
+      <p>¿Quieres añadir una lista de deseos?<br>
         Puedes añadirla cuando lo desees!</p>
 
-      <div>
-        <input type="radio" id="yeslist" name="answ" value="Yes">
-        <label for="huey">Si</label>
-      </div>
-
-      <div>
-        <input type="radio" id="nolist" name="answ" value="No">
-        <label for="dewey">No</label>
-      </div>
 
 
-    </fieldset>
+        <div class="option">
+          <input [(ngModel)]="yes" [value]="1" [ngModelOptions]="{standalone: true}" type="radio" name="yes"  >
+          <label for="answ">Si</label>
+        </div>
+
+        <div class="option" style= 'margin-left:8px' >
+          <input [(ngModel)]="yes" [value]="0" [ngModelOptions]="{standalone: true}" type="radio" name="yes" >
+          <label for="answ1">No</label>
+        </div>
+
+        <textarea formControlName="wishlist"  name="yestext" cols="30" rows="10" *ngIf=" yes == 1 " ></textarea>
+
+      </fieldset>
+      <!-- <fieldset class="field">
+
+        <legend>Niñeras</legend>
+        <div class="destiny">
+
+            <select name="nanas" *ngIf="textoDeInput" >
+              <option formControlName="nannies" value=""  *ngFor="let i of listNanas" >
+
+                  {{  i.name }}
+
+              </option>
+            </select>
+        </div>
+
+
+      </fieldset> -->
 
     <div class="bottom_sub">
-      <button type="submit">Submit</button>
+      <button type="submit"  >Añadir</button>
     </div>
 
   </form>
-
 
 
 
