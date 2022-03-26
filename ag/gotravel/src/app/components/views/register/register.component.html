@@ -1,19 +1,19 @@
 <app-navbar></app-navbar>
 <div class="container">
         <form  class="contents_container" [formGroup]="fg" (ngSubmit)="NewUser()">
-            <input formControlName="name" class="form-control" type="text" placeholder="Nombre" aria-label="default input example" > 
+            <input formControlName="name" class="form-control" type="text" placeholder="Nombre" aria-label="default input example" >
             <span *ngIf="fg.get('name')?.hasError('required')&& fg.get('name')?.touched"> El campo es obligatorio</span>
 
             <input formControlName="lastname" class="form-control" type="text" placeholder="Apellido" aria-label="default input example" >
             <!-- <span> El campo es obligatorio</span> -->
             <input formControlName="email" class="form-control" type="email" placeholder="Email" aria-label="default input example" >
             <!-- <span> El campo es obligatorio</span> -->
-            <input formControlName="password" class="form-control" type="text" placeholder="Contraseña" aria-label="default input example" >
+            <input formControlName="password" class="form-control" type="password" placeholder="Contraseña" aria-label="default input example" >
             <!-- <span> El campo es obligatorio</span> -->
             <!-- <input class="form-control" type="text" placeholder="Repite la contraseña" aria-label="default input example" ngModel required> -->
             <!-- <span> El campo es obligatorio</span> -->
             <input formControlName="telephone" class="form-control" type="text" placeholder="Número Telefónico" aria-label="default input example" >
-                <!-- <!-- <span> El campo es obligatorio</span> --> 
+                <!-- <!-- <span> El campo es obligatorio</span> -->
             <select  formControlName="role" class="form-select" aria-label="Default select example">
                 <option selected> Rol </option>
                 <option value="a"> Cliente</option>
