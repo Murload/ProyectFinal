@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
 import {  Router } from '@angular/router';
 import { LoginService } from '../../../services/login/login.service';
@@ -19,7 +19,8 @@ export class LoginComponent implements OnInit {
   loginForm : FormGroup;
 
   constructor( private fb: FormBuilder,
-    private router: Router, private logServ: LoginService) {
+    private router: Router, private logServ: LoginService,
+    private ngZone: NgZone) {
 
       this.loginForm = this.fb.group({
         email: ['', Validators.required],
@@ -55,11 +56,6 @@ export class LoginComponent implements OnInit {
 
 
   // login google
-
-    // console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-    // var id_token = googleUser.getAuthResponse().id_token;
-
-
   renderButton() {
     gapi.signin2.render('my-signin2', {
       'scope': 'profile email',
@@ -92,8 +88,11 @@ export class LoginComponent implements OnInit {
           const id_token = googleUser.getAuthResponse().id_token;
           this.logServ.loginGoogle( id_token )
             .subscribe( data => {
+              this.ngZone.run(() => {
+                this.router.navigateByUrl('/sesion');
 
-              this.router.navigateByUrl('/sesion');
+              } )
+
             });
             // navigate sesion
 
