@@ -10,8 +10,8 @@
   </div>
 
 <div class="container2" >
-  <div class="ifnopub">
-  <h1 *ngIf="listPubTrips.length == 0">No se han publicado viajes!</h1>
+  <div class="ifnopub" *ngIf="listPubTrips.length == 0">
+  <h1>No se han publicado viajes!</h1>
   </div>
   <div class="card-container" id="card2" *ngFor="let item of listPubTrips" >
     <div class="card">
