@@ -50,9 +50,13 @@ p {
 
 .content_trips {
   display:flex;
-  justify-content: center;
+  justify-content: space-between;
+
   column-gap: 5%;
   margin: 3%;
+  width: 70%;
+
+  margin-left: 15%;
 }
 
 
@@ -77,6 +81,7 @@ p {
   max-height: 90%;
   background-color: rgb(255, 255, 255);
   box-shadow: 6px 6px 3px rgb(153, 152, 152);
+
 }
 
 
@@ -122,10 +127,12 @@ p {
 .divs_info_trips {
   display: flex;
   flex-flow: row wrap;
-  column-gap: 4%;
+  column-gap: 13%;
   row-gap: 8%;
   min-height: 75vh;
   max-height: 200vh;
+  /* max-width: 100%; */
+  width: 100%;
 }
 
 
@@ -135,8 +142,8 @@ p {
   /* row-gap: 5%; */
   /* max-width: 25%; */
   background-color: white;
-  min-width: 30% ;
-  max-width: 60% ;
+  min-width: 40% ;
+  max-width: 70% ;
 
 }
 
@@ -173,7 +180,7 @@ p {
 }
 
 .button {
-  margin-top: 20%;
-  margin-left: 15%;
+  margin-top: 15%;
+  margin-left: 25%;
   }
 

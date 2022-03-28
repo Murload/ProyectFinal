@@ -42,16 +42,24 @@ export class UsersPrivTripsService {
     });
   }
 
-  putTrip( idput: string | null, trip: PrivTrip ): Observable<any> {
+  putTrip( idtrip: string | null, trip: PrivTrip ): Observable<any> {
     const token = localStorage.getItem('token') || '';
-    const id = this.logM.user._id;
-    return this.http.put(`${this.url_api}/${id}`, trip)
+    const idus = this.logM.user._id;
+    return this.http.put(`${this.url_api}/${idus}/${idtrip}`, trip, {
+      headers: {
+        'x-token': token
+      }
+    })
   }
 
-  postPublicTrip( id: any, pub: Object): Observable<any> {
+  postPublicTrip( idpub: any, pub: Object): Observable<any> {
     const token = localStorage.getItem('token') || '';
-    const id = this.logM.user._id;
-    return this.http.put(`${this.url_apiPublic}/${id}`, pub)
+    const idus = this.logM.user._id;
+    return this.http.put(`${this.url_apiPublic}/${idus}/${idpub}`, pub, {
+      headers: {
+        'x-token': token
+      }
+    });
 
   }
 

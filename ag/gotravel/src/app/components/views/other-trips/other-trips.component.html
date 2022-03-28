@@ -1,6 +1,18 @@
 
 <app-sidebar></app-sidebar>
-<div class="container" *ngIf="listPubTrips.length > 0">
+
+
+
+<div class="container">
+
+  <div>
+     <h2> Viajes publicados </h2>
+  </div>
+
+<div class="container2" >
+  <div class="ifnopub">
+  <h1 *ngIf="listPubTrips.length == 0">No se han publicado viajes!</h1>
+  </div>
   <div class="card-container" id="card2" *ngFor="let item of listPubTrips" >
     <div class="card">
       <figure class="front">
@@ -8,7 +20,10 @@
           <h5>{{ item.origin }}, {{ item.destiny }}</h5>
         </div>
         <p class="front-text">
-          {{ item.name }}
+          Nombre: {{ item.name }}
+        </p>
+        <p class="front-text2">
+          Presupuesto: {{ item.budget }}
         </p>
       </figure>
 
@@ -19,37 +34,8 @@
     </div>
   </div>
 
-  <!--CARD 2-->
-  <!-- <div class="card-container" id="card2">
-    <div class="card">
-      <figure class="front">
-        <div class="front-skew">
-          <h5>Muralla china</h5>
-        </div>
-        <p class="front-text">Es el símbolo más reconocible de China, del voluntarismo de sus habitantes y también de su aislamiento secular. </p>
-      </figure>
-
-      <figure class="back">
+</div>
 
 
-      </figure>
-    </div>
-  </div> -->
-
-  <!--CARD 3-->
-  <!-- <div class="card-container" id="card3">
-    <div class="card">
-      <figure class="front">
-        <div class="front-skew">
-          <h5>Rio De Janeiro</h5>
-        </div>
-        <p class="front-text">Vigilante sobre la cima del monte Corcovado, a 709 metros de altitud, el que es el gran emblema brasileño observa con los brazos abiertos. </p>
-      </figure>
-
-      <figure class="back">
-
-      </figure>
-    </div>
-  </div> -->
 </div>
 
