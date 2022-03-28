@@ -9,5 +9,7 @@
   max-width: 70vw;
   width: 100%;
   left: calc( 48% - 25% );
+  min-height: 100vh;
+  max-height: 150vh;
   /* top: 100px ; */
 }

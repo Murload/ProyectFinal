@@ -1,14 +1,15 @@
 
 <app-sidebar></app-sidebar>
-<div class="container">
-  <div class="card-container" id="card1">
+<div class="container" *ngIf="listPubTrips.length > 0">
+  <div class="card-container" id="card2" *ngFor="let item of listPubTrips" >
     <div class="card">
       <figure class="front">
-        <div class="front-skew">
-          <h5>Machu Picchu, Perú</h5>
+        <div class="front-skew" >
+          <h5>{{ item.origin }}, {{ item.destiny }}</h5>
         </div>
         <p class="front-text">
-A 130 kilómetros de Cuzco, la Ciudad Perdida de los incas se alza entre barrancos en mitad de un paraje inaccesible de los Andes peruanos. </p>
+          {{ item.name }}
+        </p>
       </figure>
 
       <figure class="back">
@@ -19,7 +20,7 @@ A 130 kilómetros de Cuzco, la Ciudad Perdida de los incas se alza entre barranc
   </div>
 
   <!--CARD 2-->
-  <div class="card-container" id="card2">
+  <!-- <div class="card-container" id="card2">
     <div class="card">
       <figure class="front">
         <div class="front-skew">
@@ -32,11 +33,11 @@ A 130 kilómetros de Cuzco, la Ciudad Perdida de los incas se alza entre barranc
 
 
       </figure>
-    </div><!--END OF CARD-->
-  </div><!--END OF CARD-CONTAINER-->
+    </div>
+  </div> -->
 
   <!--CARD 3-->
-  <div class="card-container" id="card3">
+  <!-- <div class="card-container" id="card3">
     <div class="card">
       <figure class="front">
         <div class="front-skew">
@@ -48,7 +49,7 @@ A 130 kilómetros de Cuzco, la Ciudad Perdida de los incas se alza entre barranc
       <figure class="back">
 
       </figure>
-    </div><!--END OF CARD-->
-  </div><!--END OF CARD-CONTAINER-->
+    </div>
+  </div> -->
 </div>
 
