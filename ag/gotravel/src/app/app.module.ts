@@ -47,6 +47,7 @@ import { ModalComponent } from './components/modal/modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ContainerTravelComponent } from './components/views/tourist-plan/container-travel/container-travel.component';
 import { SearchNanniesComponent } from './components/views/nannies/search-nannies/search-nannies.component';
+import { Trips4PublicComponent } from './components/views/public-trip/trips4-public/trips4-public.component';
 
 
 
@@ -79,7 +80,9 @@ import { SearchNanniesComponent } from './components/views/nannies/search-nannie
     ModalComponent,
     ContainerTravelComponent,
     FormNewtripComponent,
-    SearchNanniesComponent
+    SearchNanniesComponent,
+    Trips4PublicComponent,
+
 
 
   ],
@@ -98,7 +101,8 @@ import { SearchNanniesComponent } from './components/views/nannies/search-nannie
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+
 
 
   ],

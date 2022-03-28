@@ -17,7 +17,7 @@ import { FooterComponent } from './components/footer/footer.component';
 
 import { EntryComponent } from './components/views/entry/entry.component';
 import { OtherTripsComponent } from './components/views/other-trips/other-trips.component';
-import { ModalComponent } from './components/modal/modal.component';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -30,7 +30,6 @@ const routes: Routes = [
   { path: 'plan', component: TouristPlanComponent },
   { path: 'sesion', component: EntryComponent },
   { path: 'othertrips', component: OtherTripsComponent },
-  { path: 'modal', component: ModalComponent }
 
 ];
 

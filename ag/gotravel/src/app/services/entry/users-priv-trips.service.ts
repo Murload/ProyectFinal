@@ -10,6 +10,8 @@ import { PrivTrip } from '../../models/entry/PrivTrip';
 export class UsersPrivTripsService {
 
   url_api = 'http://localhost:3000/api/entry'
+  url_apiC = 'http://localhost:3000/api/entry/current'
+  url_apiPublic = 'http://localhost:3000/api/public'
 
   constructor( private http:HttpClient ) { }
 
@@ -25,5 +27,9 @@ export class UsersPrivTripsService {
     return this.http.put(`${this.url_api}/${id}`, trip)
   }
 
+  postPublicTrip( id: any, pub: Object): Observable<any> {
+    return this.http.put(`${this.url_apiPublic}/${id}`, pub)
+
+  }
 
 }

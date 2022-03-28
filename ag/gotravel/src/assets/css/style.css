@@ -18,12 +18,12 @@
 }
 
 body {
-  background: #fff;
+  background: rgb(168, 87, 87);
   color: #666666;
   font-family: "Open Sans", sans-serif;
   /* position: absolute; */
   /* min-height: 60vh; */
-  height: 200%;
+  height: 300%;
   width: 100%;
 
 

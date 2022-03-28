@@ -26,10 +26,7 @@ import Swal from 'sweetalert2';
 })
 export class BlockNewTripComponent implements OnInit {
 
-  onBlur(): void {
-    // this.consultNannies();
-    console.log('Blur');
-  }
+
 
   // lists
   listPrivTrips: PrivTrip[] = [];
@@ -93,7 +90,7 @@ export class BlockNewTripComponent implements OnInit {
 
     console.log(localStorage.getItem("id_trip"));
 
-    return localStorage.setItem("id_trip",newtrip);
+    return localStorage.setItem("id_trip", newtrip);
 
   }
 

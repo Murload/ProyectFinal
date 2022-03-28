@@ -1,0 +1,13 @@
+
+.blocks {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5%;
+  /* height: 200vh; */
+  min-width: 15vw;
+  max-width: 70vw;
+  width: 100%;
+  left: calc( 48% - 25% );
+  /* top: 100px ; */
+}
