@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms'
 import {  Router } from '@angular/router';
 import { LoginService } from '../../../services/login/login.service';
 import Swal from 'sweetalert2';
-import { decimalDigest } from '@angular/compiler/src/i18n/digest';
 
 declare const gapi: any;
 
@@ -43,7 +42,6 @@ export class LoginComponent implements OnInit {
   login(){
     this.logServ.login( this.loginForm.value )
       .subscribe( data => {
-        console.log(data);
 
         this.router.navigateByUrl('/sesion');
 

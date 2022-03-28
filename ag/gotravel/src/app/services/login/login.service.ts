@@ -6,9 +6,11 @@ import { environment } from 'src/environments/environment';
 
 import { HttpClient } from '@angular/common/http';
 import { Observable, of  } from 'rxjs';
-import { PrivTrip } from '../../models/entry/PrivTrip';
 import { LoginForm } from './login-form.interface';
 import { Router } from '@angular/router';
+import { users } from '../../models/users';
+import { PrivTrip } from 'src/app/models/entry/PrivTrip';
+
 
 // const base_url = environment.base_url;
 
@@ -20,11 +22,18 @@ declare const gapi: any;
 export class LoginService {
   url_api = 'http://localhost:3000/api/log'
 
+
+
+
   constructor( private http:HttpClient, private router: Router,
     private ngZone: NgZone) {
 
     this.googleInit();
   }
+  public user: users = new users;
+
+
+
 
   public auth2: any;
 
@@ -47,6 +56,24 @@ export class LoginService {
       }
     }).pipe(
       tap( (resp: any) => {
+        console.log(resp);
+
+        const {_id ,name, lastname, email,
+          password, telephone, role, privatetrips  } = resp.usLog;
+
+        this.user = new users(  _id,
+          name, lastname, email, '', telephone, role, privatetrips
+        );
+
+
+        console.log(this.user);
+        // console.log(this.user.lastname);
+        // console.log(this.user.email);
+        // console.log(this.user.password);
+        // console.log(this.user.telephone);
+        // console.log(this.user.role);
+        // console.log(this.user.privatetrips);
+
         localStorage.setItem('token', resp.token)
     }),
     map( resp => true),
