@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
-p, h2{
-  font-family: 'Fredoka', sans-serif;
-}
+
+
 
 .new_trip {
   /* flex */
@@ -12,7 +10,7 @@ p, h2{
   width: 73%;
   height:1500px;
   position: absolute;
-  left: 340px;
+  left: 280px;
   margin: 2.5vw;
   /* color */
   border-radius: 15px;

@@ -11,11 +11,9 @@ p, h2{
   justify-content: center;
   align-items: center;
   /* size */
-  width: 73%;
-  height: 60%;
-  position: absolute;
-  left: 280px;
-  top: 75%;
+  width: 100%;
+  min-width: 70%;
+  max-height: 150%;
   margin: 2.5vw;
   /* color */
   border-radius: 15px;
@@ -26,6 +24,7 @@ p, h2{
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 3%;
 }
 
 .title_trips h2 {
@@ -43,7 +42,7 @@ p, h2{
   justify-content: space-around;
   width: 60vw;
   height: 40vh;
-
+  margin: 2.5vw;
 }
 
 
