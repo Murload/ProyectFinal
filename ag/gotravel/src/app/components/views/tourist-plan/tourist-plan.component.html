@@ -4,8 +4,27 @@
 <section class="new_trip">
     <app-filters-plan></app-filters-plan>
     <!-- <div> -->
+        <br><br>
+        <section class="container_plan">
     
-    <div class="trips_divs">
-        <app-container-travel></app-container-travel>
-    </div>
+            <table class="table" *ngIf="listTourismplan.length > 0">
+        
+                <tbody>
+                <tr *ngFor="let tourismplan of listTourismplan">
+                    <td>{{ tourismplan.Place_name }}</td>
+                    <td>{{ tourismplan.Hosting_name}}</td>
+                    <td>{{tourismplan.Flight}}</td>
+                    <td>{{tourismplan.Arrival}}</td>
+                    <td>{{tourismplan.Departure}}</td>
+                    <td>{{tourismplan.Total_Price}}</td>
+                    <td>{{tourismplan.Details}}</td>
+                   
+                </tr>
+                
+                </tbody>
+                
+            </table>
+            
+        </section>
+
 </section>

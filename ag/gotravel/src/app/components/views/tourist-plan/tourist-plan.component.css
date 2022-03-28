@@ -10,7 +10,7 @@ p, h2{
   justify-content: center;
   /* size */
   width: 73%;
-  height: 55%;
+  height:1500px;
   position: absolute;
   left: 340px;
   margin: 2.5vw;
@@ -107,4 +107,53 @@ p, h2{
   text-align: center;
   margin: 0;
   color: black;
+}
+
+.container_plan{
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  height: 10000px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 1070px;
+  
+}
+div{
+  background-color: rgb(255, 255, 255);
+  width: 400px;
+  margin-left: 50px;
+
+}
+div img{
+  background-color: rgb(255, 255, 255);
+  width: 400px;
+  
+
+}
+.write_plan{
+  background-color: aliceblue;
+  border-radius:15px;
+  padding: 10px;
+  text-decoration: none;
+
+}
+a {
+  
+text-decoration: none;
+
+}
+a:hover{
+color: rgb(25, 163, 163);
+
+
+}
+td {
+  height: 200px;
+
+
+
+
 }
