@@ -16,21 +16,23 @@
                 <!-- <!-- <span> El campo es obligatorio</span> -->
             <select  formControlName="role" class="form-select" aria-label="Default select example">
                 <option selected> Rol </option>
-                <option value="a"> Cliente</option>
-                <option value="b"> Anunciante</option>
+                <option value="a"> Usuario</option>
+                <option value="b"> Administrador</option>
                 <option value="c"> Niñera</option>
             </select>
             <!-- <span> El campo es obligatorio</span> -->
             <button class="btn btn-primary form-control" >Regístrate </button>
+            <p style="margin-top:8%;text-align: center;">¿Ya tienes una cuenta? | Haz <a [routerLink]="['/login']" routerLinkActive="router-link-active" >click aquí</a> para Iniciar Sesión </p>
 
         </form>
 
 
-    <div class="img_container">
-        ¡CREA TU CUENTA DE <b>  SKY TRIP</b>!
-        <div>
+
+        <div class="img_container">
+          ¡CREA TU CUENTA DE <b>  SKY TRIP</b>!
+          <div>
             <img src="../assets/img/planet.png" alt="Image planet">
+          </div>
         </div>
-    </div>
 
 </div>

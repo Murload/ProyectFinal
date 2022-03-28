@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, CanActivate } from '@angular/router';
 
 // My imports
 import { HomeComponent } from './components/views/home/home.component';
@@ -17,19 +17,20 @@ import { FooterComponent } from './components/footer/footer.component';
 
 import { EntryComponent } from './components/views/entry/entry.component';
 import { OtherTripsComponent } from './components/views/other-trips/other-trips.component';
-
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+
+  { path: '', component: HomeComponent,  },
   { path: 'login', component: LoginComponent },
-  { path: 'money', component: MoneyConverterComponent },
-  { path: 'nana', component: NanniesComponent },
-  { path: 'newtrip', component: NewTripComponent },
-  { path: 'publictrip', component: PublicTripComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'plan', component: TouristPlanComponent },
-  { path: 'sesion', component: EntryComponent },
-  { path: 'othertrips', component: OtherTripsComponent },
+  { path: 'money', canActivate: [ AuthGuard ],component: MoneyConverterComponent },
+  { path: 'nana', canActivate: [ AuthGuard ],component: NanniesComponent },
+  { path: 'newtrip', canActivate: [ AuthGuard ],component: NewTripComponent },
+  { path: 'publictrip', canActivate: [ AuthGuard ], component: PublicTripComponent },
+  { path: 'plan', canActivate: [ AuthGuard ], component: TouristPlanComponent },
+  { path: 'sesion', canActivate: [ AuthGuard ], component: EntryComponent },
+  { path: 'othertrips', canActivate: [ AuthGuard ], component: OtherTripsComponent },
 
 ];
 
