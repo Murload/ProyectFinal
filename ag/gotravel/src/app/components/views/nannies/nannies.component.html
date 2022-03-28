@@ -1,8 +1,6 @@
 
     <app-sidebar></app-sidebar>
-    <!-- <app-search-nannies></app-search-nannies> -->
-
-    <div class="col 10 input" >
+    <div class="input" >
       <form [formGroup]="nanniesList" (ngSubmit)="showNanniesByCountry()">
           <div class="mb-3">
           <input type="text" formControlName="country" class="form-control-lg" placeholder="Introduce el país">
@@ -13,32 +11,52 @@
   
     <!-- por pais -->
     <div class="container"  >
-      <div class="row">
-          <div class="card" *[ngIf]="nannyCountry.length > 0">
+          <div  *[ngIf]="nannyCountry.length > 0">
           </div>
-        </div>
-          <div class="card"*ngFor="let _dataCountry of nannyCountry">
-            <img src="../../../../assets/img/about-us-img.jpg" class="card-img-top" alt="...">
+        
+          <div class="card" style="text-align: center;" *ngFor="let _dataCountry of nannyCountry">
+            <img src="../../../../assets/img/nannies/niñera(1).jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <p class="card-text">{{_dataCountry.name}} {{_dataCountry.lastName}}</p>
               <p class="card-text"> ${{_dataCountry.price}}</p>
               <p class="card-text">Edad: {{_dataCountry.age}}</p>
+              <button type="button"  class="btn btn-outline-success d-grid gap-2 col-6 mx-auto" (click)="openLG(contenido, _dataCountry._id)" (click)="showNanniesById()">Ver más</button>
             </div>
           </div>
     </div>
+    
+    <!-- modal -->
 
+<ng-template #contenido let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Niñera</h4>
+    <button class="close" aria-label="close" type="button" (click)="modal.dismiss()" >
+      <span aria-hidden="true" >&times;</span>
+    </button>
+  </div>
 
-    <div class="container" *ngIf="nannyCountry.length > 0">
-      <div class="row">
-          <div class="card" *[ngIf]="nannyList.length > 0">
-          </div>
-        </div>
-          <div class="card"*ngFor="let _datanannie of nannyList">
-            <img src="../../../../assets/img/about-us-img.jpg" class="card-img-top" alt="...">
+  <div class="modal-body">
+    
+      
+          <div class="card" style="text-align: center;" >
             <div class="card-body">
-              <p class="card-text">{{_datanannie.name}} {{_datanannie.lastName}}</p>
-              <p class="card-text"> ${{_datanannie.price}}</p>
-              <p class="card-text">Edad: {{_datanannie.age}}</p>
+              <p class="card-text">Nombre: {{ name }}</p>
+              <p class="card-text"> Apellido: {{ lastName }}</p>
+              <p class="card-text"> País: {{ country }}</p>
+              <p class="card-text"> Lugar de nacimiento: {{ bornCountry }}</p>
+              <p class="card-text">Edad: {{ age }}</p>
+              <p class="card-text"> Precio p/h: {{ price }}</p>
+              <p class="card-text"> Experiencia: {{ experience }}</p>
+              <p class="card-text"> Antecedentes: {{ criminalRecord }}</p>
+              <p class="card-text"> Descripción: {{ description }}</p>
+              <p class="card-text"> Contacto: {{ phone }}</p>
             </div>
           </div>
-    </div>
+          
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-success"  (click)="modal.close()">Ok!</button>
+  </div>
+
+</ng-template>
+

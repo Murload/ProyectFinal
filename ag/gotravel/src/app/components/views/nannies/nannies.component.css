@@ -8,14 +8,19 @@ p, h3{
   align-items: center;
   justify-content: center;
   display: grid;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 .container{
   margin-top: 3rem;
-  display: grid;
-  justify-content: center;
-
+  display: flex;
+  flex-flow: row wrap;
+  /* justify-content: center; */
+  max-width: 70%;
+  min-width: 20%;
+  column-gap: 13%;
+  left:30%;
+  position: absolute;
 }
 
 .card{
@@ -23,7 +28,7 @@ p, h3{
   box-sizing: border-box;
   margin: 10px 0;
   background-color: #fff;
-  max-width: 400px;
+  max-width: 25%;
   transition: all 0.2 ease-in-out;
   }
 
@@ -35,3 +40,11 @@ p, h3{
    padding: 10px;
  }
 
+ .row {
+  max-width: 25%;
+ }
+.ng-template{
+  width: 50%;
+  height: 50%;
+  
+}

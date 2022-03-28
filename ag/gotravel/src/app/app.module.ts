@@ -47,6 +47,9 @@ import { ModalComponent } from './components/modal/modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ContainerTravelComponent } from './components/views/tourist-plan/container-travel/container-travel.component';
 import { SearchNanniesComponent } from './components/views/nannies/search-nannies/search-nannies.component';
+import { DashboardAdmComponent } from './components/views/admin/dashboard-adm/dashboard-adm.component';
+import { NavBarAdmComponent } from './components/views/admin/nav-bar-adm/nav-bar-adm.component';
+import { SideBarAdmComponent } from './components/views/admin/side-bar-adm/side-bar-adm.component';
 
 
 
@@ -79,9 +82,10 @@ import { SearchNanniesComponent } from './components/views/nannies/search-nannie
     ModalComponent,
     ContainerTravelComponent,
     FormNewtripComponent,
-    SearchNanniesComponent
-
-
+    SearchNanniesComponent,
+    DashboardAdmComponent,
+    NavBarAdmComponent,
+    SideBarAdmComponent,
   ],
   imports: [
     BrowserModule,

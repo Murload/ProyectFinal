@@ -10,6 +10,7 @@ export class NanaAllService {
 
   url_api = 'http://localhost:3000/api/nannies'
   url_apiCountry = 'http://127.0.0.1:3000/api/nannies/country'
+  url_apiId = 'http://127.0.0.1:3000/api/nannies/id'
 
 
   constructor( private http:HttpClient ) { }
@@ -17,7 +18,5 @@ export class NanaAllService {
   getAllNannies(): Observable<any> {
     return this.http.get(this.url_api);
   }
-
-
 
 }

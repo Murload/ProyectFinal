@@ -45,9 +45,6 @@ export class BlockNewTripComponent implements OnInit {
 
   // datos path
 
-
-
-
   constructor( private PrivService : UsersPrivTripsService,  private modal: NgbModal,
     private fb: FormBuilder,
     private router: Router ) {
