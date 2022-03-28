@@ -30,7 +30,7 @@
             Debes llenar este campo!
           </div>
             <label for="destiny">Lugar de destino</label>
-            <input (blur) = 'onBlur()' [(ngModel)]='textoDeInput' type="text" formControlName="destiny" placeholder="A dónde vas...">
+            <input  [(ngModel)]='textoDeInput' type="text" formControlName="destiny" placeholder="A dónde vas...">
 
             <div   class="alert alert-info" *ngIf="putTripForm.get('destiny')?.hasError('required')
               && putTripForm.get('destiny')?.touched">
@@ -150,7 +150,10 @@
 </ng-template>
 
 
+<!-- nav bar -->
 
+
+<!-- nav bar -->
 
 <section class="new_trip" >
 
@@ -178,8 +181,7 @@
         <div class="if_notrip" *ngIf="listPrivTrips.length == 0" >
 
           <p>
-            Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit.
+            No has creado viajes! Da click en el botón "Crear nuevo viaje" para crear un nuevo viaje.
           </p>
         </div>
 

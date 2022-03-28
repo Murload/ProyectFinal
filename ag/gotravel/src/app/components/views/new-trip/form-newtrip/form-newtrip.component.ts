@@ -5,7 +5,6 @@ import Swal from 'sweetalert2';
 
 import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
 import { Nannies } from '../../../../models/entry/Nannies';
-import { NanaAllService } from 'src/app/services/entry/nana-all.service';
 
 import { UsersPrivTripsService } from 'src/app/services/entry/users-priv-trips.service';
 

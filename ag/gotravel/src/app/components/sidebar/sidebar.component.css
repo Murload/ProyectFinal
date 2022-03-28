@@ -15,21 +15,69 @@
 
 .side-bar {
   display: flex;
+  flex-direction: column;
   left: 0;
-  width: 22%;
-  height: 100%;
+  min-width: 8%;
+  max-width: 25%;
+  height: 100vh;
   background: linear-gradient(45deg, rgb(0, 174, 255),  #00d8e7, #0ae63a);
   box-shadow: 8px 1px 15px #c0c0c0;
-  flex-flow: column wrap;
   padding: 20px;
   position: fixed;
   row-gap: 20px;
 }
 
+@media ( max-width: 500px ) {
+  .side-bar {
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    width: 65px;
+    height: 100%;
+    background: linear-gradient(45deg, rgb(0, 174, 255),  #00d8e7, #0ae63a);
+    position: fixed;
+    row-gap: 10px;
+
+  }
+  .side-icolink img {
+    margin-left: -15px;
+
+  }
+
+  .side-options {
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 0.2vh;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .side-bar {
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    width: 65px;
+    height: 100%;
+    background: linear-gradient(45deg, rgb(0, 174, 255),  #00d8e7, #0ae63a);
+    position: fixed;
+    row-gap: 10px;
+
+  }
+
+  .side-icolink img {
+    margin-left: -15px;
+
+  }
+
+}
+
+
+
 .side-options {
   display: flex;
   flex-flow: column wrap;
-  row-gap: 4.5vh;
+  row-gap: 1.8vh;
 }
 
 .side-icolink {

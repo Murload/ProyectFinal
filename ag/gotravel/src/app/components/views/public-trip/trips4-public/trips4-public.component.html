@@ -1,0 +1,47 @@
+
+
+
+<section class="new_trip">
+
+  <div class="title_trips">
+    <p>Aqui puedes seleccionar los viajes que quieras hacer <br> públicos a los demás</p>
+  </div>
+
+  <div class="content_trips" >
+
+    <div class="divs_info_trips" >
+
+
+      <div class="if_notrip" *ngIf="listPrivTrips.length == 0" >
+
+        <p>
+          No has creado viajes! Da click en el botón "Crear nuevo viaje" para crear un nuevo viaje.
+        </p>
+      </div>
+
+      <div
+      class="default_div"
+      *ngFor="let newtrip of listPrivTrips"
+      >
+
+        <div class="content">
+          <p> {{ newtrip.origin }} , {{ newtrip.destiny }} </p>
+        </div>
+
+        <div class="button">
+
+          <button type="button" class="btn btn-success" (click)="publicT(newtrip._id) "   >Publicar Viaje</button>
+        </div>
+
+        </div>
+
+
+      </div>
+
+
+
+  </div>
+
+
+</section>
+

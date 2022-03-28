@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { NanaAllService } from './nana-all.service';
+import { PublicTripService } from './public-trip.service';
 
-describe('NanaAllService', () => {
-  let service: NanaAllService;
+describe('PublicTripService', () => {
+  let service: PublicTripService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(NanaAllService);
+    service = TestBed.inject(PublicTripService);
   });
 
   it('should be created', () => {

@@ -10,15 +10,25 @@
 
 
   <div class="contents_container">
-    <form >
-      <input class="form-control" type="email" placeholder="Email" aria-label="default input example">
+    <form [formGroup]="loginForm"  (ngSubmit)="login()" >
+      <input formControlName="email" class="form-control" type="email" placeholder="Email" aria-label="default input example">
+
       <!-- <span> No se puede ingresar caracteres especiales</span> -->
-          <input class="form-control" type="text" placeholder="Contraseña" aria-label="default input example">
+          <input formControlName="password" class="form-control" type="password" placeholder="Contraseña" aria-label="default input example">
           <!-- <span> No se puede ingresar caracteres especiales</span> -->
 
-          <button class="btn btn-primary form-control"> <a [routerLink]="['/sesion']" routerLinkActive="router-link-active" >Inicia Sesión</a>  </button>
 
+            <select  formControlName="role" class="form-select" aria-label="Default select example">
+              <option selected> Rol </option>
+              <option value="a"> Usuario</option>
+              <option value="b"> Administrador</option>
+              <option value="c"> Niñera</option>
+            </select>
+
+          <button class="btn btn-primary form-control"> Iniciar Sesión  </button>
+          <div id="my-signin2" style="margin-top: 5%;margin-left: 17%;" ></div>
         </form>
+          <p style="margin-top:8%">¿No tienes una cuenta? | Haz <a [routerLink]="['/register']" routerLinkActive="router-link-active" >click aquí</a> para crear una </p>
       </div>
 
 

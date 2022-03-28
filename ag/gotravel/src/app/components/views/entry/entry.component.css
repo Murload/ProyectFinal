@@ -12,7 +12,8 @@
   min-width: 15vw;
   max-width: 70vw;
   width: 100%;
-  left: 290px;
+  left: calc( 48% - 25% );
+  /* top: 100px ; */
 }
 
 

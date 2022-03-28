@@ -15,11 +15,11 @@ export class UserServiceService {
 
   constructor(private http:HttpClient) { }
 
-  
+
   getUser():Observable<any>{
     return this.http.get(this.url)
-  } 
-  
+  }
+
   Newregister( user : users ): Observable<any>{
     return this.http.post(this.url, user);
   }
