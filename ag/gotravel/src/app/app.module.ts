@@ -48,6 +48,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ContainerTravelComponent } from './components/views/tourist-plan/container-travel/container-travel.component';
 import { SearchNanniesComponent } from './components/views/nannies/search-nannies/search-nannies.component';
 import { Trips4PublicComponent } from './components/views/public-trip/trips4-public/trips4-public.component';
+import { Page404Component } from './components/page404/page404.component';
 
 
 
@@ -82,6 +83,7 @@ import { Trips4PublicComponent } from './components/views/public-trip/trips4-pub
     FormNewtripComponent,
     SearchNanniesComponent,
     Trips4PublicComponent,
+    Page404Component,
 
 
 
