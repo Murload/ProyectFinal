@@ -10,6 +10,7 @@ import { NewTripComponent } from './components/views/new-trip/new-trip.component
 import { PublicTripComponent } from './components/views/public-trip/public-trip.component';
 import { RegisterComponent } from './components/views/register/register.component';
 import { TouristPlanComponent } from './components/views/tourist-plan/tourist-plan.component';
+import { Page404Component } from './components/page404/page404.component';
 
 import { AboutUsComponent } from './components/views/home/about-us/about-us.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -22,6 +23,8 @@ import { AuthGuard } from './guards/auth.guard';
 const routes: Routes = [
 
   { path: '', component: HomeComponent,  },
+  { path: '404', component:  Page404Component},
+  { path: '**', redirectTo: '404', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'money', canActivate: [ AuthGuard ],component: MoneyConverterComponent },
