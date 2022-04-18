@@ -69,3 +69,29 @@ span{
 
 
 }
+@media (max-width: 1000px){
+.container{
+    flex-direction: column;
+    align-items: center;
+}
+.contents_container{
+    margin-top: 0%;
+}
+}
+
+@media(max-width: 600px){
+.img_container{
+    font-size: 35px;
+    margin-left: 10%;
+}
+}
+
+@media (max-width: 500px){
+    .img_container{
+        margin-left: 50%;
+        font-size: 20px;
+    }
+    .contents_container{
+    margin-left: 50%;
+    }
+}

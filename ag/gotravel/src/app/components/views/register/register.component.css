@@ -67,3 +67,26 @@ span{
 
 
 }
+
+@media(max-width: 1199px){
+.container{
+    flex-direction: column-reverse;
+    align-items: center;
+    max-width: max-content;
+    margin-top: 0%;
+}
+.contents_container{
+    margin: 0%;
+    width: auto;
+}
+}
+
+@media(max-width: 800px){
+    .img_container{
+        font-size: 30px;
+        margin-left: 37%;
+    }
+    .contents_container{
+        margin-left: 37%;
+    }
+}
