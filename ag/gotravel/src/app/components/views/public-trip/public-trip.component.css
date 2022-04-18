@@ -3,13 +3,44 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  row-gap: 5%;
-  /* height: 200vh; */
   min-width: 15vw;
   max-width: 70vw;
   width: 100%;
-  left: calc( 48% - 25% );
+  left: calc( 45% - 22% );
   min-height: 100vh;
   max-height: 150vh;
-  /* top: 100px ; */
+
+}
+
+@media (max-width:1000px) {
+  .blocks {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5%;
+    height: 100vh;
+    min-width: 15vw;
+    max-width: 70vw;
+    width: 100%;
+    left: calc( 50% - 25% );
+    /* min-height: 100vh;
+    max-height: 150vh; */
+    /* top: 100px ; */
+  }
+
+}
+@media (max-width:700px) {
+  .blocks {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5%;
+    height: 100vh;
+    min-width: 15vw;
+    max-width: 70vw;
+    width: 100%;
+    left: calc( 50% - 30% );
+
+  }
+
 }

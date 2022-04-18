@@ -161,6 +161,8 @@
     <h2> Tus últimos Viajes </h2>
   </div>
 
+  <div class="num-trips"><p>Tienes {{ len }} viajes </p></div>
+
   <div class="content_trips" >
 
     <!-- <div class="trips_divs"> -->
@@ -176,14 +178,16 @@
     <!-- </div> -->
 
 
+
     <div class="divs_info_trips" >
 
         <div class="if_notrip" *ngIf="listPrivTrips.length == 0" >
 
           <p>
-            No has creado viajes! Da click en el botón "Crear nuevo viaje" para crear un nuevo viaje.
+            No has creado viajes! haz click en el botón "Crear nuevo viaje" para crear uno nuevo.
           </p>
         </div>
+
 
       <div style="cursor: pointer"
       class="default_div"
@@ -196,21 +200,23 @@
         <img  src="assets/img/gallery/beach.jpg" alt="default">
 
         <p>
-
-          {{ newtrip.name }}
+          Nombre: {{ newtrip.name }}
         <br>
-          {{ newtrip.origin }}
+          Origen: {{ newtrip.origin }}
         <br>
-          {{ newtrip.destiny }}
+          Destino: {{ newtrip.destiny }}
         </p>
 
       </div>
 
 
-
     </div>
 </div>
-    <!-- </div> -->
+<div class="next-page" *ngIf="(len || 0) >  6 " >
+  <button (click)="changePage(-6)" class="btn btn-dark" >Anterior</button>
+  &nbsp;
+  <button (click)="changePage(6)" class="btn btn-dark" >Siguiente</button>
+</div>
 
 
 

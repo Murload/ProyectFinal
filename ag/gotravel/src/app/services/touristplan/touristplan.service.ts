@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TouristplanService {
-  url = 'http://127.0.0.1:3000/api/plan' 
+  url = 'http://127.0.0.1:3000/api/plan'
 
   constructor( private http:HttpClient) {}
 
@@ -14,5 +14,5 @@ export class TouristplanService {
       return this.http.get(this.url)
     }
 
-  
+
 }

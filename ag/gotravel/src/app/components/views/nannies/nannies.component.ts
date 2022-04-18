@@ -47,14 +47,13 @@ constructor(private _nanniesServices: NanniesService, private fb: FormBuilder , 
 
   openLG(contenido: any, id: any) {
     this.modal.open(contenido, {size:'lg'});
-    // console.log(id);
 
     localStorage.setItem("id_nana", id);
 
-    console.log(localStorage.getItem("id"));
   }
 
   showNanniesById(){
+
     this._nanniesServices.getNanaById(localStorage.getItem("id_nana")).subscribe( data => {
       this.name = data.name;
       this.lastName = data.lastName;
@@ -67,8 +66,6 @@ constructor(private _nanniesServices: NanniesService, private fb: FormBuilder , 
       this.description = data.description;
       this.phone = data.phone;
 
-
-      // console.log(this.name);
     }, error => {
       console.log(error);
     });
@@ -78,9 +75,7 @@ constructor(private _nanniesServices: NanniesService, private fb: FormBuilder , 
       const country: string = this.nanniesList.get('country')?.value
 
         this._nanniesServices.getNanniesByCountry(country).subscribe(data=>{
-          console.log("esto es data",data);
           this.nannyCountry = data;
-          console.log("esta es nannycountry", this.nannyCountry);
 
         } , err => {
           console.log(err);

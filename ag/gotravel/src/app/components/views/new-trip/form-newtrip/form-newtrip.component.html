@@ -20,7 +20,7 @@
         Debes llenar este campo!
       </div>
         <label for="destiny">Lugar de destino</label>
-        <input (blur) = 'onBlur()' [(ngModel)]='textoDeInput' type="text" formControlName="destiny" placeholder="A dónde vas...">
+        <input  [(ngModel)]='textoDeInput' type="text" formControlName="destiny" placeholder="A dónde vas...">
 
         <div   class="alert alert-info" *ngIf="newTripForm.get('destiny')?.hasError('required')
           && newTripForm.get('destiny')?.touched">

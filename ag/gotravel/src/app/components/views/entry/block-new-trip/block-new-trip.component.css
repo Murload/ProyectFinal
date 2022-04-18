@@ -51,7 +51,10 @@ p, h2{
   display:flex;
   justify-content: center;
   column-gap: 5%;
-  margin: 3%;
+  /* margin: 3%; */
+  margin-bottom: 3%;
+  margin-left: 3%;
+  margin-right: 3%;
 }
 
 
@@ -125,8 +128,10 @@ p, h2{
 .divs_info_trips {
   display: flex;
   flex-flow: row wrap;
-  column-gap: 8%;
-  row-gap: 3%;
+  /* justify-content: center; */
+  column-gap: 5%;
+  row-gap: 5%;
+  margin: 2.5%;
 }
 
 
@@ -134,8 +139,8 @@ p, h2{
   display: flex;
   flex-direction: column;
   row-gap: 5%;
-  max-width: 25%;
-  max-height: 95%;
+  max-width: 30%;
+  max-height: 100%;
   background-color: white;
 
 }
@@ -147,7 +152,7 @@ p, h2{
   min-width: 60%;
   max-width: 100%;
   min-height: 10%;
-  max-height: 55%;
+  max-height: 50%;
 }
 .default_div  p {
   min-width: 60%;
@@ -160,6 +165,24 @@ p, h2{
   text-align: center;
   color: black;
 }
+
+/* buttons next page */
+.next-page {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+  column-gap: 2%;
+}
+
+.num-trips {
+  display: flex;
+  justify-content: center;
+}
+.num-trips p{
+  margin: 0px !important;
+}
+
+/* end buttons next page */
 
 /* modal */
 .close {

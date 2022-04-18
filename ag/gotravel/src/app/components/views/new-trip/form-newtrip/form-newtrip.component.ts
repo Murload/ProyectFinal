@@ -24,11 +24,6 @@ import {  Router } from '@angular/router';
 export class FormNewtripComponent implements OnInit {
 
 
-  onBlur(): void {
-    // this.consultNannies();
-    console.log('Blur');
-  }
-
   // para ingresar country
   textoDeInput = '';
 

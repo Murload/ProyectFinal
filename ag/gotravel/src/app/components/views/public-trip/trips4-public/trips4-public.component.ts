@@ -25,7 +25,6 @@ export class Trips4PublicComponent implements OnInit {
 
   consultPrivTrips() {
     this.PrivService.getPrivTrips().subscribe( data => {
-      console.log(data);
       this.listPrivTrips = data;
     }, error => {
       console.log(error);

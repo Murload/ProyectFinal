@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../../services/login/login.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-sidebar',
@@ -16,6 +17,17 @@ export class SidebarComponent implements OnInit {
 
   logout() {
     this.userServ.logout();
+  }
+
+  process() {
+    Swal.fire({
+      title: 'En construcción!',
+      text: 'Esta Sección se encuentra en Desarrollo.',
+      imageUrl: '../../../assets/img/programacion-web.png',
+      imageWidth: 128,
+      imageHeight: 128,
+      imageAlt: 'Custom image',
+    })
   }
 
 }

@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class NanniesService {
 
   urlApi = 'http://127.0.0.1:3000/api/nannies';
-  urlID = 'http://127.0.0.1:3000/api/nannies/id';
+
 
   constructor(private http: HttpClient) { }
 
@@ -35,7 +35,7 @@ export class NanniesService {
   getNanaById(id: any): Observable<any> {
 
     const token = localStorage.getItem('token') || '';
-    return this.http.get(`${this.urlID}/${id}`,{
+    return this.http.get(`${this.urlApi}/id/${id}`,{
       headers: {
         'x-token': token
       }

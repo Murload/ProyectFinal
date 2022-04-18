@@ -15,53 +15,49 @@ export class UsersPrivTripsService {
   url_apiC = 'http://localhost:3000/api/entry/current'
   url_apiPublic = 'http://localhost:3000/api/public'
 
-
-
+  // Constructor
   constructor( private http:HttpClient, private logM: LoginService ) { }
 
+  // Getters
+  get token(): string {
+    return localStorage.getItem('token')  || '';
+  }
 
-
-
-  getPrivTrips( ): Observable<any> {
-    const token = localStorage.getItem('token') || '';
-    const id = this.logM.user._id;
-    return this.http.get(`${this.url_api}/${id}`, {
+  get headers() {
+    return {
       headers: {
-        'x-token': token
+        'x-token': this.token
       }
-    });
+    }
+  }
+
+  // Methods
+  getPrivTrips( desde: number = 0 ): Observable<any> {
+    const idus = this.logM.user._id;
+    const url =  `${this.url_api}/${idus}/?desde=${ desde }`;
+    return this.http.get( url, this.headers)
+
   }
 
   postNewTrip( newTrip: PrivTrip ): Observable<any> {
-    const token = localStorage.getItem('token') || '';
+
     const id = this.logM.user._id;
-    return this.http.post(`${this.url_api}/${id}`, newTrip, {
-      headers: {
-        'x-token': token
-      }
-    });
+    return this.http.post(`${this.url_api}/${id}`, newTrip, this.headers);
   }
 
   putTrip( idtrip: string | null, trip: PrivTrip ): Observable<any> {
-    const token = localStorage.getItem('token') || '';
     const idus = this.logM.user._id;
-    return this.http.put(`${this.url_api}/${idus}/${idtrip}`, trip, {
-      headers: {
-        'x-token': token
-      }
-    })
+    return this.http.put(`${this.url_api}/${idus}/${idtrip}`, trip, this.headers)
   }
 
   postPublicTrip( idpub: any, pub: Object): Observable<any> {
-    const token = localStorage.getItem('token') || '';
+
     const idus = this.logM.user._id;
-    return this.http.put(`${this.url_apiPublic}/${idus}/${idpub}`, pub, {
-      headers: {
-        'x-token': token
-      }
-    });
+    return this.http.put(`${this.url_apiPublic}/${idus}/${idpub}`, pub, this.headers);
 
   }
+
+
 
 
 

@@ -8,12 +8,12 @@
             <span *ngIf="fg.get('lastname')?.hasError('required')&& fg.get('lastname')?.touched"> El campo es obligatorio</span>
             <input formControlName="email" class="form-control" type="email" placeholder="Email" aria-label="default input example" >
             <span *ngIf="fg.get('email')?.hasError('required')&& fg.get('email')?.touched"> El campo es obligatorio</span>
-            <input formControlName="password" class="form-control" type="text" placeholder="Contraseña" aria-label="default input example" >
+            <input formControlName="password" class="form-control" type="password" placeholder="Contraseña" aria-label="default input example" >
             <span *ngIf="fg.get('password')?.hasError('required')&& fg.get('password')?.touched"> El campo es obligatorio</span>
             <!-- <input class="form-control" type="text" placeholder="Repite la contraseña" aria-label="default input example" ngModel required> -->
             <!-- <span> El campo es obligatorio</span> -->
             <input formControlName="telephone" class="form-control" type="text" placeholder="Número Telefónico" aria-label="default input example" >
-              <span *ngIf="fg.get('telephone')?.hasError('required')&& fg.get('telephone')?.touched" > El campo es obligatorio</span>  
+              <span *ngIf="fg.get('telephone')?.hasError('required')&& fg.get('telephone')?.touched" > El campo es obligatorio</span>
             <select  formControlName="role" class="form-select" aria-label="Default select example">
                 <option selected> Rol </option>
                 <option value="a"> Usuario</option>

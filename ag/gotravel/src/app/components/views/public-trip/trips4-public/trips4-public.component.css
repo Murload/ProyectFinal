@@ -1,4 +1,4 @@
-p, h1,h2, h3, h4{
+p, h1,h2, h3, h5{
   font-family: 'Fredoka', sans-serif;
 }
 
@@ -9,21 +9,29 @@ p {
 .new_trip {
   /* flex */
   display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
+  flex-flow: column ;
+  justify-items: center;
+  align-items: center;
   /* size */
-  /* min-height: 75%;
-  max-height: 100%; */
+  min-height: 50vh;
+  max-height: 100vh;
   width: 100%;
   margin: 2.5vw;
-
   /* color */
   border-radius: 15px;
   background-color: #e7e7e7;
-
   overflow: visible;
 }
 
+.linkcreate {
+  color: #00b7ff;
+  font-weight: bolder;
+  text-decoration: none;
+}
+.linkcreate:hover {
+  color: #00dd63;
+  font-weight: bolder;
+}
 
 .title_trips {
   display: flex;
@@ -39,86 +47,32 @@ p {
   font-family: 'Fredoka', sans-serif;
 }
 
-.trips_divs {
-  display: flex;
-  flex-flow: row wrap;
-  gap: 20px;
-  min-height: 50%;
-  max-height: 75%;
-  margin: 15px;
-}
 
 .content_trips {
   display:flex;
-  justify-content: space-between;
-
-  column-gap: 5%;
-  margin: 3%;
   width: 70%;
 
-  margin-left: 15%;
 }
 
 
-
-.add_trip {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-width: 20%;
-  max-width: 60%;
-  /* min-height: 55%;
-  max-height: 90%; */
-}
-
-.content_add {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-  min-height: 50%;
-  max-height: 90%;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 6px 6px 3px rgb(153, 152, 152);
-
-}
-
-
-.content_add:hover {
-  box-shadow: 3.5px 3.5px 3px rgb(153, 152, 152);
-  /* max-width: 25%;
-  max-height: 1000%; */
-  /* width: 105%;
-  height: 105%; */
-}
-
-
-.add_trip h4 {
-  text-align: center;
-  margin-top: 5px;
-  min-width: 50%;
-  max-width: 75%;
-  min-height: 10%;
-  max-height: 30%;
-  font-size: 70%;
-  overflow: hidden;
-}
 
 /* text if doesn't exist trips */
 
 
 .if_notrip {
-
+  display: flex;
+  align-items: center;
+  justify-self: center;
   background-color: #fff;
-  width: 100%;
-  height: 100%;
+  width: 50vw;
+  height: 30vh;
   border-radius: 20px;
+  padding: 10px;
 }
-.if_notrip p{
-  padding: 10%;
-  font-size: 15px;
+.if_notrip h5{
+  align-items: center;
   color: black;
+  text-align: center;
 }
 /* ------NO TRIPS------ */
 
@@ -127,11 +81,10 @@ p {
 .divs_info_trips {
   display: flex;
   flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
   column-gap: 13%;
   row-gap: 8%;
-  min-height: 75vh;
-  max-height: 200vh;
-  /* max-width: 100%; */
   width: 100%;
 }
 
@@ -139,35 +92,36 @@ p {
 .default_div {
   display: flex;
   flex-direction: column;
-  /* row-gap: 5%; */
-  /* max-width: 25%; */
-  background-color: white;
-  min-width: 40% ;
-  max-width: 70% ;
-
+  width: 28%;
+  height: 220px;
 }
 
 
-
-
-
-.publicar {
+.content-pub {
+  /* position: absolute; */
   display: flex;
-  flex-direction: column;
-  /* justify-content: space-evenly; */
-  background-color: aliceblue;
-  width: 40%;
-  height: 160%;
+  flex-flow: row wrap;
+  align-self: center;
+  column-gap: 7%;
+  min-width: 90%;
+  max-width: 100%;
+  min-height: 40vh;
+  max-height: 100vh;
+  /* min-height: 90vh;
+  max-height: 150vh; */
+  padding: 2%;
 }
+
+
 
 .content {
   display: flex;
+  /* flex-direction: row; */
   justify-content: center;
   align-self: flex-start;
   text-align: center;
   width: 100%;
   height: 45%;
-  /* background-color: #097000; */
   background: rgb(0, 174, 255);
 
 }
@@ -180,7 +134,11 @@ p {
 }
 
 .button {
-  margin-top: 15%;
-  margin-left: 25%;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 120px;
+}
 

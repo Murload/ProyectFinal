@@ -8,8 +8,10 @@ import { PrivTrip } from '../../../../models/entry/PrivTrip';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
-import {  Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { Nannies } from '../../../../models/entry/Nannies';
+
+import { LoginService } from '../../../../services/login/login.service';
 
 
 // forms import
@@ -29,7 +31,7 @@ export class BlockNewTripComponent implements OnInit {
 
 
   // lists
-  listPrivTrips: PrivTrip[] = [];
+  listPrivTrips: any = [];
   listNanas: Nannies[] = [];
 
   // form
@@ -40,14 +42,16 @@ export class BlockNewTripComponent implements OnInit {
 
 
 
-  // datos path
-
+  // variables
+  public desde: number = 0;
+  public len: number | undefined = this.logM.user.privatetrips?.length;
 
 
 
   constructor( private PrivService : UsersPrivTripsService,  private modal: NgbModal,
     private fb: FormBuilder,
-    private router: Router ) {
+    private router: Router,
+    private logM: LoginService ) {
 
       this.putTripForm = this.fb.group({
         name: ['', Validators.required],
@@ -67,17 +71,39 @@ export class BlockNewTripComponent implements OnInit {
   ngOnInit(): void {
 
     this.consultPrivTrips();
+
   }
 
-  consultPrivTrips() {
-    this.PrivService.getPrivTrips().subscribe( data => {
-      console.log(data);
+  consultPrivTrips( ) {
+    this.PrivService.getPrivTrips( this.desde )
+    .subscribe( data => {
       this.listPrivTrips = data;
     }, error => {
       console.log(error);
     } );
 
   }
+
+
+
+
+// cambiar página
+changePage( valor: number ) {
+    this.desde += valor;
+    console.log(this.len);
+    if( this.desde < 0 ) {
+
+      this.desde = 0;
+
+    } else if ( this.desde > (this.len || 0) ){
+      this.desde -= valor;
+
+    }
+
+    this.consultPrivTrips();
+
+  }
+
 
   // open modal
   openLG(contenido: any) {
@@ -130,7 +156,7 @@ export class BlockNewTripComponent implements OnInit {
       }).then((result) => {
         if (result.isConfirmed) {
           this.router.navigateByUrl('/sesion');
-          this.consultPrivTrips();
+          // this.consultPrivTrips();
         }
       })
     }, error => {
@@ -148,6 +174,8 @@ export class BlockNewTripComponent implements OnInit {
 
     // console.log( data_private );
   }
+
+
 
 
 
